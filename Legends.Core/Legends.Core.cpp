@@ -1,0 +1,27 @@
+/*This source code copyrighted by Lazy Foo' Productions 2004-2024
+and may not be redistributed without written permission.*/
+
+//Using SDL and standard IO
+#define SDL_MAIN_HANDLED
+#include <SDL.h>
+#include <stdio.h>
+#include "GameSystem.h"
+
+using namespace LegendsCore::Assets;
+
+const int SCREEN_WIDTH = 800;
+const int SCREEN_HEIGHT = 600;
+
+GameSystem gameSystem;
+
+int main(int argc, char* argv[])
+{
+	gameSystem.width = SCREEN_WIDTH;
+	gameSystem.height = SCREEN_HEIGHT;
+
+	gameSystem.init();
+	gameSystem.prepareScene();
+	gameSystem.start();
+
+	return 0;
+}
