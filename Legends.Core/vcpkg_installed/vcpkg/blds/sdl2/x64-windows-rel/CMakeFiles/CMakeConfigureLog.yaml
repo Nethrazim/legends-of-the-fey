@@ -1,0 +1,1358 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      The system is: Windows - 10.0.22631 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: B:/Visual Studio/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 
+      Build flags: /nologo;/DWIN32;/D_WINDOWS;/utf-8;/MP
+      Id flags:  
+      
+      The output was:
+      0
+      CMakeCCompilerId.c
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+      
+      The C compiler identification is MSVC, found in:
+        B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/3.31.6-msvc6/CompilerIdC/CMakeCCompilerId.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1288 (message)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Detecting C compiler /showIncludes prefix:
+        main.c
+        Note: including file: B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\ShowIncludes\\foo.h
+        
+      Found prefix "Note: including file: "
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-3877zd"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-3877zd"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-3877zd'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_a2583
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_a2583.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_a2583.dir\\ /FS -c "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_a2583.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_a2583.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_a2583.exe /implib:cmTC_a2583.lib /pdb:cmTC_a2583.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:163 (try_compile)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:68 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:84 (check_symbol_exists)"
+    checks:
+      - "Looking for __GLIBC__"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-rz80rt"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-rz80rt"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "LIBC_IS_GLIBC"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-rz80rt'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_7e093
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_7e093.dir\\CheckSymbolExists.c.obj /FdCMakeFiles\\cmTC_7e093.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-rz80rt\\CheckSymbolExists.c
+        FAILED: CMakeFiles/cmTC_7e093.dir/CheckSymbolExists.c.obj 
+        "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_7e093.dir\\CheckSymbolExists.c.obj /FdCMakeFiles\\cmTC_7e093.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-rz80rt\\CheckSymbolExists.c
+        B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-rz80rt\\CheckSymbolExists.c(8): error C2065: '__GLIBC__': undeclared identifier
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:28 (_internal_check_cpu_architecture)"
+      - "CMakeLists.txt:141 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_X86"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-7n1dcw"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-7n1dcw"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_X86"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-7n1dcw'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_06a57
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DCHECK_CPU_ARCHITECTURE_X86  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_06a57.dir\\src.c.obj /FdCMakeFiles\\cmTC_06a57.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-7n1dcw\\src.c
+        FAILED: CMakeFiles/cmTC_06a57.dir/src.c.obj 
+        "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DCHECK_CPU_ARCHITECTURE_X86  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_06a57.dir\\src.c.obj /FdCMakeFiles\\cmTC_06a57.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-7n1dcw\\src.c
+        B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-7n1dcw\\src.c(6): error C2065: 'choke': undeclared identifier
+        B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-7n1dcw\\src.c(8): error C2143: syntax error: missing ';' before '}'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:30 (_internal_check_cpu_architecture)"
+      - "CMakeLists.txt:142 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_X64"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-cj6vdt"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-cj6vdt"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_X64"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-cj6vdt'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_61c29
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DCHECK_CPU_ARCHITECTURE_X64  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_61c29.dir\\src.c.obj /FdCMakeFiles\\cmTC_61c29.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-cj6vdt\\src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_61c29.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_61c29.dir\\src.c.obj  /out:cmTC_61c29.exe /implib:cmTC_61c29.lib /pdb:cmTC_61c29.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:32 (_internal_check_cpu_architecture)"
+      - "CMakeLists.txt:143 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_ARM32"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-mhnay1"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-mhnay1"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_ARM32"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-mhnay1'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_fe1ed
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DCHECK_CPU_ARCHITECTURE_ARM32  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_fe1ed.dir\\src.c.obj /FdCMakeFiles\\cmTC_fe1ed.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-mhnay1\\src.c
+        FAILED: CMakeFiles/cmTC_fe1ed.dir/src.c.obj 
+        "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DCHECK_CPU_ARCHITECTURE_ARM32  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_fe1ed.dir\\src.c.obj /FdCMakeFiles\\cmTC_fe1ed.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-mhnay1\\src.c
+        B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-mhnay1\\src.c(6): error C2065: 'choke': undeclared identifier
+        B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-mhnay1\\src.c(8): error C2143: syntax error: missing ';' before '}'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:34 (_internal_check_cpu_architecture)"
+      - "CMakeLists.txt:144 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_ARM64"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-nlhuby"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-nlhuby"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_ARM64"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-nlhuby'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_010b6
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DCHECK_CPU_ARCHITECTURE_ARM64  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_010b6.dir\\src.c.obj /FdCMakeFiles\\cmTC_010b6.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-nlhuby\\src.c
+        FAILED: CMakeFiles/cmTC_010b6.dir/src.c.obj 
+        "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DCHECK_CPU_ARCHITECTURE_ARM64  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_010b6.dir\\src.c.obj /FdCMakeFiles\\cmTC_010b6.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-nlhuby\\src.c
+        B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-nlhuby\\src.c(6): error C2065: 'choke': undeclared identifier
+        B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-nlhuby\\src.c(8): error C2143: syntax error: missing ';' before '}'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:36 (_internal_check_cpu_architecture)"
+      - "CMakeLists.txt:145 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_ARM64EC"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-4px9z2"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-4px9z2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_ARM64EC"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-4px9z2'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_a9c12
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DCHECK_CPU_ARCHITECTURE_ARM64EC  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_a9c12.dir\\src.c.obj /FdCMakeFiles\\cmTC_a9c12.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-4px9z2\\src.c
+        FAILED: CMakeFiles/cmTC_a9c12.dir/src.c.obj 
+        "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DCHECK_CPU_ARCHITECTURE_ARM64EC  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_a9c12.dir\\src.c.obj /FdCMakeFiles\\cmTC_a9c12.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-4px9z2\\src.c
+        B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-4px9z2\\src.c(6): error C2065: 'choke': undeclared identifier
+        B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-4px9z2\\src.c(8): error C2143: syntax error: missing ';' before '}'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:38 (_internal_check_cpu_architecture)"
+      - "CMakeLists.txt:146 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_LOONGARCH64"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-7dmdea"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-7dmdea"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_LOONGARCH64"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-7dmdea'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_8681f
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DCHECK_CPU_ARCHITECTURE_LOONGARCH64  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_8681f.dir\\src.c.obj /FdCMakeFiles\\cmTC_8681f.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-7dmdea\\src.c
+        FAILED: CMakeFiles/cmTC_8681f.dir/src.c.obj 
+        "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DCHECK_CPU_ARCHITECTURE_LOONGARCH64  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_8681f.dir\\src.c.obj /FdCMakeFiles\\cmTC_8681f.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-7dmdea\\src.c
+        B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-7dmdea\\src.c(6): error C2065: 'choke': undeclared identifier
+        B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-7dmdea\\src.c(8): error C2143: syntax error: missing ';' before '}'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:1018 (check_include_file)"
+    checks:
+      - "Looking for immintrin.h"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-p3ynky"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-p3ynky"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_IMMINTRIN_H"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-p3ynky'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_e48b8
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_e48b8.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_e48b8.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-p3ynky\\CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_e48b8.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_e48b8.dir\\CheckIncludeFile.c.obj  /out:cmTC_e48b8.exe /implib:cmTC_e48b8.lib /pdb:cmTC_e48b8.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:1027 (check_include_file)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-t2u3zv"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-t2u3zv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-t2u3zv'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_cc292
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_cc292.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_cc292.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-t2u3zv\\CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_cc292.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_cc292.dir\\CheckIncludeFile.c.obj  /out:cmTC_cc292.exe /implib:cmTC_cc292.lib /pdb:cmTC_cc292.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:163 (try_compile)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckSymbolExists.cmake:68 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:1048 (check_symbol_exists)"
+    checks:
+      - "Looking for M_PI"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-vtt5a1"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-vtt5a1"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_M_PI"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-vtt5a1'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_1bd67
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_1bd67.dir\\CheckSymbolExists.c.obj /FdCMakeFiles\\cmTC_1bd67.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-vtt5a1\\CheckSymbolExists.c
+        FAILED: CMakeFiles/cmTC_1bd67.dir/CheckSymbolExists.c.obj 
+        "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_1bd67.dir\\CheckSymbolExists.c.obj /FdCMakeFiles\\cmTC_1bd67.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-vtt5a1\\CheckSymbolExists.c
+        B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-vtt5a1\\CheckSymbolExists.c(8): error C2065: 'M_PI': undeclared identifier
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:1788 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_WIN32_CC"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-dv393y"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-dv393y"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_WIN32_CC"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-dv393y'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_7b537
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DHAVE_WIN32_CC  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_7b537.dir\\src.c.obj /FdCMakeFiles\\cmTC_7b537.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-dv393y\\src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_7b537.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_7b537.dir\\src.c.obj  /out:cmTC_7b537.exe /implib:cmTC_7b537.lib /pdb:cmTC_7b537.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:1823 (check_include_file)"
+    checks:
+      - "Looking for d3d9.h"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-gjh2af"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-gjh2af"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_D3D_H"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-gjh2af'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_02152
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_02152.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_02152.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-gjh2af\\CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_02152.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_02152.dir\\CheckIncludeFile.c.obj  /out:cmTC_02152.exe /implib:cmTC_02152.lib /pdb:cmTC_02152.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:1824 (check_include_file)"
+    checks:
+      - "Looking for d3d11_1.h"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-5z8mh5"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-5z8mh5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_D3D11_H"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-5z8mh5'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_b76d2
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_b76d2.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_b76d2.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-5z8mh5\\CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_b76d2.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_b76d2.dir\\CheckIncludeFile.c.obj  /out:cmTC_b76d2.exe /implib:cmTC_b76d2.lib /pdb:cmTC_b76d2.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:1825 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_D3D12_H"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-g5rrsb"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-g5rrsb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_D3D12_H"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-g5rrsb'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_b9a9e
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DHAVE_D3D12_H  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_b9a9e.dir\\src.c.obj /FdCMakeFiles\\cmTC_b9a9e.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-g5rrsb\\src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_b9a9e.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_b9a9e.dir\\src.c.obj  /out:cmTC_b9a9e.exe /implib:cmTC_b9a9e.lib /pdb:cmTC_b9a9e.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:1831 (check_include_file)"
+    checks:
+      - "Looking for ddraw.h"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-3m4k1f"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-3m4k1f"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_DDRAW_H"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-3m4k1f'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_220e7
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_220e7.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_220e7.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-3m4k1f\\CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_220e7.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_220e7.dir\\CheckIncludeFile.c.obj  /out:cmTC_220e7.exe /implib:cmTC_220e7.lib /pdb:cmTC_220e7.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:1832 (check_include_file)"
+    checks:
+      - "Looking for dsound.h"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-zrcc5b"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-zrcc5b"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_DSOUND_H"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-zrcc5b'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_798ba
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_798ba.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_798ba.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-zrcc5b\\CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_798ba.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_798ba.dir\\CheckIncludeFile.c.obj  /out:cmTC_798ba.exe /implib:cmTC_798ba.lib /pdb:cmTC_798ba.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:1833 (check_include_file)"
+    checks:
+      - "Looking for dinput.h"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-4dfrl6"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-4dfrl6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_DINPUT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-4dfrl6'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_be8c7
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_be8c7.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_be8c7.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-4dfrl6\\CheckIncludeFile.c
+        C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\um\\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_be8c7.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_be8c7.dir\\CheckIncludeFile.c.obj  /out:cmTC_be8c7.exe /implib:cmTC_be8c7.lib /pdb:cmTC_be8c7.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:1837 (check_include_file)"
+    checks:
+      - "Looking for dxgi.h"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-k7gayk"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-k7gayk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_DXGI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-k7gayk'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_bb5eb
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_bb5eb.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_bb5eb.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-k7gayk\\CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_bb5eb.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_bb5eb.dir\\CheckIncludeFile.c.obj  /out:cmTC_bb5eb.exe /implib:cmTC_bb5eb.lib /pdb:cmTC_bb5eb.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:1853 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_XINPUT_H"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-ipytiz"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-ipytiz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_XINPUT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-ipytiz'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_797f0
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DHAVE_XINPUT_H  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_797f0.dir\\src.c.obj /FdCMakeFiles\\cmTC_797f0.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-ipytiz\\src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_797f0.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_797f0.dir\\src.c.obj  /out:cmTC_797f0.exe /implib:cmTC_797f0.lib /pdb:cmTC_797f0.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:1857 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_WINDOWS_GAMING_INPUT_H"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-n6qnka"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-n6qnka"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_WINDOWS_GAMING_INPUT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-n6qnka'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_6434f
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DHAVE_WINDOWS_GAMING_INPUT_H  /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_6434f.dir\\src.c.obj /FdCMakeFiles\\cmTC_6434f.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-n6qnka\\src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_6434f.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_6434f.dir\\src.c.obj  /out:cmTC_6434f.exe /implib:cmTC_6434f.lib /pdb:cmTC_6434f.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:1865 (check_include_file)"
+    checks:
+      - "Looking for tpcshrd.h"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-e9hbu3"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-e9hbu3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_TPCSHRD_H"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-e9hbu3'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_89112
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_89112.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_89112.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-e9hbu3\\CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_89112.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_89112.dir\\CheckIncludeFile.c.obj  /out:cmTC_89112.exe /implib:cmTC_89112.lib /pdb:cmTC_89112.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:1866 (check_include_file)"
+    checks:
+      - "Looking for roapi.h"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-3nv47p"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-3nv47p"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_ROAPI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-3nv47p'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_86c0d
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_86c0d.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_86c0d.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-3nv47p\\CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_86c0d.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_86c0d.dir\\CheckIncludeFile.c.obj  /out:cmTC_86c0d.exe /implib:cmTC_86c0d.lib /pdb:cmTC_86c0d.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:1867 (check_include_file)"
+    checks:
+      - "Looking for mmdeviceapi.h"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-q4urcl"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-q4urcl"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_MMDEVICEAPI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-q4urcl'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_fd079
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_fd079.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_fd079.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-q4urcl\\CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_fd079.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_fd079.dir\\CheckIncludeFile.c.obj  /out:cmTC_fd079.exe /implib:cmTC_fd079.lib /pdb:cmTC_fd079.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:1868 (check_include_file)"
+    checks:
+      - "Looking for audioclient.h"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-xjb2e3"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-xjb2e3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_AUDIOCLIENT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-xjb2e3'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_4e41a
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_4e41a.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_4e41a.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-xjb2e3\\CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_4e41a.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_4e41a.dir\\CheckIncludeFile.c.obj  /out:cmTC_4e41a.exe /implib:cmTC_4e41a.lib /pdb:cmTC_4e41a.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:1869 (check_include_file)"
+    checks:
+      - "Looking for sensorsapi.h"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-hh8e90"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-hh8e90"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_SENSORSAPI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-hh8e90'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_38308
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_38308.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_38308.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-hh8e90\\CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_38308.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_38308.dir\\CheckIncludeFile.c.obj  /out:cmTC_38308.exe /implib:cmTC_38308.lib /pdb:cmTC_38308.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "CMakeLists.txt:1870 (check_include_file)"
+    checks:
+      - "Looking for shellscalingapi.h"
+    directories:
+      source: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-jtn656"
+      binary: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-jtn656"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " /nologo /DWIN32 /D_WINDOWS /utf-8 /MP "
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Z7 /Ob0 /Od /RTC1 "
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/src/se-2.32.10-3b143ac573.clean/cmake"
+      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: ""
+      CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Debug>:Debug>$<$<STREQUAL:dynamic,dynamic>:DLL>"
+      VCPKG_CHAINLOAD_TOOLCHAIN_FILE: "B:/Visual Studio/VC/vcpkg/scripts/toolchains/windows.cmake"
+      VCPKG_CRT_LINKAGE: "dynamic"
+      VCPKG_CXX_FLAGS: ""
+      VCPKG_CXX_FLAGS_DEBUG: ""
+      VCPKG_CXX_FLAGS_RELEASE: ""
+      VCPKG_C_FLAGS: ""
+      VCPKG_C_FLAGS_DEBUG: ""
+      VCPKG_C_FLAGS_RELEASE: ""
+      VCPKG_INSTALLED_DIR: "B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed"
+      VCPKG_LINKER_FLAGS: ""
+      VCPKG_LINKER_FLAGS_DEBUG: ""
+      VCPKG_LINKER_FLAGS_RELEASE: ""
+      VCPKG_PLATFORM_TOOLSET: "v143"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_SET_CHARSET_FLAG: "ON"
+      VCPKG_TARGET_ARCHITECTURE: "x64"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "B:/Visual Studio/VC/vcpkg"
+    buildResult:
+      variable: "HAVE_SHELLSCALINGAPI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/CMakeScratch/TryCompile-jtn656'
+        
+        Run Build Command(s): "B:/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_a7d47
+        [1/2] "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /nologo /DWIN32 /D_WINDOWS /utf-8 /MP   -D_GNU_SOURCE=1 /MDd /Z7 /Ob0 /Od /RTC1  -MDd /showIncludes /FoCMakeFiles\\cmTC_a7d47.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_a7d47.dir\\ /FS -c B:\\Workspace\\legends-of-the-fey\\Legends.Core\\vcpkg_installed\\vcpkg\\blds\\sdl2\\x64-windows-rel\\CMakeFiles\\CMakeScratch\\TryCompile-jtn656\\CheckIncludeFile.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "B:\\Visual Studio\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_a7d47.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x64\\mt.exe --manifests  -- "B:\\Visual Studio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_a7d47.dir\\CheckIncludeFile.c.obj  /out:cmTC_a7d47.exe /implib:cmTC_a7d47.lib /pdb:cmTC_a7d47.pdb /version:0.0 /machine:x64  /nologo    /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+...

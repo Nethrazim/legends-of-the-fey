@@ -1,0 +1,2 @@
+B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/debug/lib/zlibd.lib
+B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/debug/bin/zlibd1.dll

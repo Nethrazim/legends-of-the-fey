@@ -1,0 +1,6 @@
+B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2-image/x64-windows-dbg/CMakeFiles/SDL2_image.dir
+B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2-image/x64-windows-dbg/CMakeFiles/edit_cache.dir
+B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2-image/x64-windows-dbg/CMakeFiles/rebuild_cache.dir
+B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2-image/x64-windows-dbg/CMakeFiles/list_install_components.dir
+B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2-image/x64-windows-dbg/CMakeFiles/install.dir
+B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2-image/x64-windows-dbg/CMakeFiles/install/local.dir
