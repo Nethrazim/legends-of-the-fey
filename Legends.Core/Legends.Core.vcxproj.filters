@@ -13,10 +13,44 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="GameAssets">
+      <UniqueIdentifier>{622aed61-31e7-4614-af97-1a2833c70cba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AssetsManager">
+      <UniqueIdentifier>{12c7b33d-8599-4c8c-94bc-0cffbb64d133}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Legends.Core.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AssetsLoader.cpp">
+      <Filter>AssetsManager</Filter>
+    </ClCompile>
+    <ClCompile Include="BMPLoader.cpp">
+      <Filter>AssetsManager</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetsManager.cpp">
+      <Filter>AssetsManager</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="SDL2-2.32.2\lib\x64\SDL2.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="hello_world.bmp">
+      <Filter>GameAssets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AssetsLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BMPLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetsManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,20 +1,107 @@
-// Legends.Core.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/*This source code copyrighted by Lazy Foo' Productions 2004-2024
+and may not be redistributed without written permission.*/
 
-#include <iostream>
+//Using SDL and standard IO
+#define SDL_MAIN_HANDLED
+#include <SDL.h>
+#include <stdio.h>
+#include "AssetsManager.h"
 
-int main()
-{
-    std::cout << "Hello World!\n";
+using namespace LegendsCore::Assets;
+
+const int SCREEN_WIDTH = 640;
+const int SCREEN_HEIGHT = 480;
+
+bool init();
+
+bool loadMedia();
+
+void close();
+
+
+SDL_Window* gWindow = NULL;
+
+SDL_Surface* gScreenSurface = NULL;
+
+SDL_Surface* gHelloWorld = NULL;
+
+bool init() {
+
+	if (SDL_Init(SDL_INIT_VIDEO) < 0)
+	{
+		printf("SDL could not be initialize! SDL_Error: %s\n", SDL_GetError());
+		return false;
+	}
+
+	gWindow = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+
+	if (gWindow == NULL)
+	{
+		printf("Window couuld not be created! SDL_ERROR: %s\n", SDL_GetError());
+		return false;
+	}
+
+	gScreenSurface = SDL_GetWindowSurface(gWindow);
+	
+	return true;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+bool loadMedia()
+{
+	AssetsManager::Load("", "hello_world.bmp", gHelloWorld);
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+	if (gHelloWorld == NULL)
+	{
+		printf("Unable to load image %s! SDL_ERROR", SDL_GetError());
+		return false;
+	}
+
+	return true;
+}
+
+void close()
+{
+	//Deallocate surface
+	SDL_FreeSurface(gHelloWorld);
+	gHelloWorld = NULL;
+
+	//Destroy window
+	SDL_DestroyWindow(gWindow);
+	gWindow = NULL;
+
+	//Quit SDL subsystems
+	SDL_Quit();
+}
+
+int main(int argc, char* args[])
+{
+	//Start up SDL and create window
+	if (!init())
+	{
+		printf("Failed to initialize!\n");
+	}
+	else
+	{
+		//Load media
+		if (!loadMedia())
+		{
+			printf("Failed to load media!\n");
+		}
+		else
+		{
+			//Apply the image
+			SDL_BlitSurface(gHelloWorld, NULL, gScreenSurface, NULL);
+
+			//Update the surface
+			SDL_UpdateWindowSurface(gWindow);
+
+			//Hack to get window to stay up
+			SDL_Event e; bool quit = false; while (quit == false) { while (SDL_PollEvent(&e)) { if (e.type == SDL_QUIT) quit = true; } }
+		}
+	}
+
+	//Free resources and close SDL
+	close();
+
+	return 0;
+}
