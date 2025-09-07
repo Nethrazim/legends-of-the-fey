@@ -136,7 +136,11 @@
     <ClCompile Include="AssetsLoader.cpp" />
     <ClCompile Include="AssetsManager.cpp" />
     <ClCompile Include="BMPLoader.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Legends.Core.cpp" />
+    <ClCompile Include="Rotation.cpp" />
+    <ClCompile Include="Scale.cpp" />
+    <ClCompile Include="Transform.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="SDL2-2.32.2\lib\x64\SDL2.dll">
@@ -159,6 +163,10 @@
     <ClInclude Include="AssetsLoader.h" />
     <ClInclude Include="AssetsManager.h" />
     <ClInclude Include="BMPLoader.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Rotation.h" />
+    <ClInclude Include="Scale.h" />
+    <ClInclude Include="Transform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

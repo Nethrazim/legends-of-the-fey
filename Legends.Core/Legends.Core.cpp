@@ -18,12 +18,13 @@ bool loadMedia();
 
 void close();
 
+AssetsManager* assetManager = new AssetsManager();
 
-SDL_Window* gWindow = NULL;
+SDL_Window *gWindow = NULL;
 
-SDL_Surface* gScreenSurface = NULL;
+SDL_Surface *gScreenSurface = NULL;
 
-SDL_Surface* gHelloWorld = NULL;
+SDL_Surface *gHelloWorld = NULL;
 
 bool init() {
 
@@ -48,7 +49,7 @@ bool init() {
 
 bool loadMedia()
 {
-	AssetsManager::Load("", "hello_world.bmp", gHelloWorld);
+	assetManager->Load("", "hello_world.bmp", gHelloWorld);
 
 	if (gHelloWorld == NULL)
 	{
@@ -71,9 +72,12 @@ void close()
 
 	//Quit SDL subsystems
 	SDL_Quit();
+
+	delete assetManager;
+	
 }
 
-int main(int argc, char* args[])
+int main(int argc, char* argv[])
 {
 	//Start up SDL and create window
 	if (!init())

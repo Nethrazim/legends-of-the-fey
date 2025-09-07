@@ -2,6 +2,7 @@
 #include <string>
 #include <SDL_surface.h>
 #include "AssetsLoader.h"
+#include "BMPLoader.h"
 
 namespace LegendsCore
 {
@@ -10,10 +11,13 @@ namespace LegendsCore
 		class AssetsManager
 		{
 		public:
-			static void Load(std::string path, std::string file, SDL_Surface*& imgSurface);
+			void Load(std::string path, std::string file, SDL_Surface*& imgSurface);
+			~AssetsManager();
+
 		private:
-			static AssetsLoader* createFactoryObject(std::string fileName);
-			static std::string getExtension(const std::string& fileName);
+			AssetsLoader* createFactoryObject(std::string fileName);
+			std::string getExtension(const std::string& fileName);
+			BMPLoader* bmpLoader;
 		};
 	};
 };

@@ -19,6 +19,18 @@
     <Filter Include="AssetsManager">
       <UniqueIdentifier>{12c7b33d-8599-4c8c-94bc-0cffbb64d133}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{4b7ddc44-d58c-40b6-a5a1-bbd6a9d06e0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Transform">
+      <UniqueIdentifier>{8e231f38-33f7-4e2a-92bd-998b8d8a9f45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\GameObject">
+      <UniqueIdentifier>{08def2a6-75bc-4683-a892-da9f396658b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{64bbd3cb-c433-44fe-b615-ad4fefcba0d6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Legends.Core.cpp">
@@ -33,6 +45,18 @@
     <ClCompile Include="AssetsManager.cpp">
       <Filter>AssetsManager</Filter>
     </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>GameObject\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>GameObject\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Rotation.cpp">
+      <Filter>GameObject\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="Scale.cpp">
+      <Filter>GameObject\Transform</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="SDL2-2.32.2\lib\x64\SDL2.dll" />
@@ -43,14 +67,26 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AssetsLoader.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Transform.h">
+      <Filter>GameObject\Transform</Filter>
     </ClInclude>
-    <ClInclude Include="BMPLoader.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="GameObject.h">
+      <Filter>GameObject\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Rotation.h">
+      <Filter>GameObject\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="Scale.h">
+      <Filter>GameObject\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetsLoader.h">
+      <Filter>AssetsManager</Filter>
     </ClInclude>
     <ClInclude Include="AssetsManager.h">
-      <Filter>Header Files</Filter>
+      <Filter>AssetsManager</Filter>
+    </ClInclude>
+    <ClInclude Include="BMPLoader.h">
+      <Filter>AssetsManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -11,17 +11,31 @@ void LegendsCore::Assets::AssetsManager::Load(std::string path, std::string file
 
 	AssetsLoader* assetsLoader = createFactoryObject(fileName);
 	assetsLoader->Load(path, fileName, imgSurface);
+	delete assetsLoader;
 }
 
 
 LegendsCore::Assets::AssetsLoader* LegendsCore::Assets::AssetsManager::createFactoryObject(std::string fileName)
 {
 	std::string extensionType = getExtension(fileName);
+	AssetsLoader* loader = nullptr;
 
 	if (extensionType == "bmp")
-		return new BMPLoader();
+	{
+		if (bmpLoader == nullptr)
+		{
+			loader = new BMPLoader();
+			bmpLoader = static_cast<BMPLoader*>(loader);
+			return bmpLoader;
+		}
+		else
+		{
+			return bmpLoader;
+		}
+	}
+		
 
-	return nullptr;
+	return loader;
 }
 
 std::string LegendsCore::Assets::AssetsManager::getExtension(const std::string& fileName)
@@ -32,4 +46,13 @@ std::string LegendsCore::Assets::AssetsManager::getExtension(const std::string& 
 		return fileName.substr(dotPos + 1);
 	}
 	return "";
+}
+
+LegendsCore::Assets::AssetsManager::~AssetsManager() 
+{
+	
+	if (bmpLoader != nullptr)
+	{
+		delete bmpLoader;
+	}
 }
