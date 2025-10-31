@@ -108,6 +108,12 @@
     <ClCompile Include="SceneDesigner.cpp">
       <Filter>GameSystem\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="TileMap.cpp">
+      <Filter>GameSystem\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="System.cpp">
+      <Filter>GameSystem\SystemTick</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Transform.h">
@@ -164,11 +170,11 @@
     <ClInclude Include="SceneDesigner.h">
       <Filter>GameSystem\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="SystemFrameTick.cpp">
-      <Filter>GameSystem\SystemTick</Filter>
+    <ClInclude Include="System.h">
+      <Filter>GameSystem\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="SystemFrameTick.h">
-      <Filter>GameSystem\SystemTick</Filter>
+    <ClInclude Include="TileMap.h">
+      <Filter>GameSystem\Scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -178,6 +184,9 @@
     </CopyFileToFolders>
     <CopyFileToFolders Include="SDL2_image-2.8.6\lib\x64\SDL2_image.dll" />
     <CopyFileToFolders Include="map.png">
+      <Filter>GameAssets</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="tile.jpg">
       <Filter>GameAssets</Filter>
     </CopyFileToFolders>
   </ItemGroup>

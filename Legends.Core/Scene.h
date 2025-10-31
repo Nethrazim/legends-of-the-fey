@@ -7,6 +7,8 @@
 
 #include "GameObject.h"
 #include "SceneLayer.h"
+#include "TileMap.h"
+
 class GameLoop;
 
 using namespace GameObjects;
@@ -16,14 +18,23 @@ class Scene
 public:
 	Scene(std::string name);
     ~Scene();
-	void update();
-	void render();
-	void addObject(GameObject* object);
-	std::vector<GameObject*> gameObjects;
-	SDL_Texture* sceneTexture;
 
-	std::map<std::string, SceneLayer*> layers = { 
+	std::string name;
+	
+	std::vector<GameObject*> gameObjects;
+	
+	TileMap* tileMap;
+
+	SDL_Texture* sceneTexture;
+	
+	std::map<std::string, SceneLayer*> layers = {
 		{"default", new SceneLayer()}
 	};
-	std::string name;
+
+
+	void update();
+	
+	void render();	
+	
+	void addObject(GameObject* object);
 };

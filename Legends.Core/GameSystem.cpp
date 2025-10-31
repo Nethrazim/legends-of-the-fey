@@ -7,7 +7,7 @@ void GameSystem::init()
 {
 
 	windowManager.setWindowDimensions(width, height);
-	windowManager.setFullScreenMode();
+	windowManager.setWindowMode();
 	windowManager.initSDL();
 	windowManager.createWindow();
 

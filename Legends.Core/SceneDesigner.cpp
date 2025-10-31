@@ -4,7 +4,8 @@ void SceneDesigner::prepareScene()
 {
 	Scene* scene = new Scene("default");
 	scene->sceneTexture = SDL_CreateTexture(GameLoop::renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, 3840, 2160);
-	
+	scene->tileMap = new TileMap();
+
 	GameObject* map = new GameObject();
 	map->layer = "default";
 	map->transform.x = 0;
@@ -17,7 +18,7 @@ void SceneDesigner::prepareScene()
 	gameObject->layer = "enemies";
 	gameObject->transform.x = 50;
 	gameObject->transform.y = 50;
-	gameObject->sprite.loadTexture("", "hello_world.bmp");
+	gameObject->sprite.loadTexture("", "tile.jpg");
 	gameObject->sprite.width = 64;
 	gameObject->sprite.height = 64;
 
@@ -37,7 +38,7 @@ void SceneDesigner::prepareScene()
 	gameObject3->sprite.width = 64;
 	gameObject3->sprite.height = 64;
 
-	scene->addObject(map);
+	//scene->addObject(map);
 	scene->addObject(gameObject);
 	scene->addObject(gameObject2);
 	scene->addObject(gameObject3);
