@@ -39,8 +39,8 @@ void SceneDesigner::prepareScene()
 		 0.0f,  0.6f, 0.0f,  0.0f, 0.0f, 1.0f
 	};
 	
-	openGLgameObject->meshRenderer.setVertices(vertices, sizeof(vertices) / sizeof(float));
-	openGLgameObject->meshRenderer.createGLProgram(vertex_triangle_basic_src, fragment_triangle_basic_src);
+	openGLgameObject->meshRenderer->setVertices(vertices, sizeof(vertices) / sizeof(float));
+	openGLgameObject->meshRenderer->createGLProgram(vertex_triangle_basic_src, fragment_triangle_basic_src);
 
 
 	GameObject* openGLgameObject2 = new GameObject();
@@ -54,8 +54,8 @@ void SceneDesigner::prepareScene()
 		 0.0f,  0.2f, 0.0f,  0.0f, 0.0f, 1.0f
 	};
 
-	openGLgameObject2->meshRenderer.setVertices(vertices2, sizeof(vertices2) / sizeof(float));
-	openGLgameObject2->meshRenderer.createGLProgram(vertex_triangle_basic_src, fragment_triangle_basic_src);
+	openGLgameObject2->meshRenderer->setVertices(vertices2, sizeof(vertices2) / sizeof(float));
+	openGLgameObject2->meshRenderer->createGLProgram(vertex_triangle_basic_src, fragment_triangle_basic_src);
 
 	/**
 	GameObject* gameObject2 = new GameObject();

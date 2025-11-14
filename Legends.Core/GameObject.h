@@ -8,13 +8,17 @@
 #include "Scale.h"
 #include "Sprite.h"
 #include "MeshRenderer.h"
+#include "glm/glm.hpp"
 
 namespace GameObjects
 {
 	class GameObject
 	{
+	
 	public:
+
 		std::string layer = "default";
+		
 		GameObject();
 		virtual ~GameObject();
 
@@ -22,8 +26,12 @@ namespace GameObjects
 		Rotation rotation;
 		Scale scale;
 		Sprite sprite;
-		MeshRenderer meshRenderer;
+		MeshRenderer* meshRenderer;
 
-		void update();
+		virtual void update();
+
+		glm::mat4 model = glm::mat4(1.0f);
+		glm::mat4 uMVP = glm::mat4(1.0f);
+		virtual void updateMVP();
 	};
 }

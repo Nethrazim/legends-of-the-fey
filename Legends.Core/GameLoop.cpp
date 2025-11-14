@@ -86,7 +86,7 @@ void GameLoop::render() {
 	//SDL_SetRenderDrawColor(renderer, 34, 139, 34, 255);
 	//SDL_RenderClear(renderer);
 	glViewport(0, 0, 800, 600);
-	glClearColor(34.0f / 255.0f, 139.0f / 255.0f, 34.0f / 255.0f, 1.0f);
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	SceneManager::currentScene()->render();

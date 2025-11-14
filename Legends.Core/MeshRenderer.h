@@ -2,12 +2,19 @@
 #include "glad.h"
 #include <SDL2/SDL.h>
 
+namespace GameObjects {
+	class GameObject;
+}
+
+using namespace GameObjects;
+
+using GameObjectPtr = GameObject*;
 class MeshRenderer
 { 
 public:
-	
-	MeshRenderer();
-	MeshRenderer(float* newVertices, int size);
+	GameObjectPtr gameObject = nullptr;
+	MeshRenderer(GameObjectPtr gameObject);
+	MeshRenderer(GameObjectPtr gameObject, float* newVertices, int size);
 
 	~MeshRenderer();
 

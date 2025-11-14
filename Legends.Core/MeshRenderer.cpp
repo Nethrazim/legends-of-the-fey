@@ -1,13 +1,22 @@
 #include <iostream>
 #include "MeshRenderer.h"
 #include "ShaderUtils.h"
+#include "GameObject.h"
+#include <glm/gtc/type_ptr.hpp>
 
-MeshRenderer::MeshRenderer()
-	: vertices(nullptr)
+namespace GameObjects {
+	class GameObject;
+}
+
+using GameObjectPtr = GameObject*;
+
+MeshRenderer::MeshRenderer(GameObjectPtr gameObject)
+	: gameObject(gameObject), vertices(nullptr)
 {
 }
 
-MeshRenderer::MeshRenderer(float *newVertices, int size)
+MeshRenderer::MeshRenderer(GameObjectPtr gameObject, float *newVertices, int size)
+	: gameObject(gameObject), vertices(nullptr)
 {
 	this->setVertices(newVertices, size);	
 }
@@ -92,7 +101,11 @@ void MeshRenderer::render(int width, int height, SDL_Window* window, SDL_GLConte
 
 	
 	glUseProgram(program);
+	GLint uMVP = glGetUniformLocation(program, "uMVP"); // get uniform location
+	glUniformMatrix4fv(uMVP, 1, GL_FALSE, glm::value_ptr(gameObject->uMVP));
+
 	glBindVertexArray(vao);
+
 	glDrawArrays(GL_TRIANGLES, 0, 3);
 
 	glBindVertexArray(0);

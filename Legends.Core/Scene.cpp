@@ -74,9 +74,9 @@ void Scene::render()
 	{
 		for (std::vector<GameObject*>::iterator jit = it->second->layer.begin(); jit != it->second->layer.end(); ++jit)
 		{
-			if ((*jit)->meshRenderer.active)
+			if ((*jit)->meshRenderer->active)
 			{
-				(*jit)->meshRenderer.render(800, 600, WindowManager::getWindow(), context_);
+				(*jit)->meshRenderer->render(800, 600, WindowManager::getWindow(), context_);
 			}
 			else
 			{
