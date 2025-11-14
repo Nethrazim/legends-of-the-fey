@@ -16,7 +16,8 @@ void GameObjects::GameObject::update()
 {
 	if (this->layer == "enemies")
 	{
-		transform.x++;
+		transform.x += 0.1f * System::deltaTime;
+		rotation.y += 10.0f * System::deltaTime;
 	}
 
 	updateMVP();
@@ -24,16 +25,32 @@ void GameObjects::GameObject::update()
 
 void GameObjects::GameObject::updateMVP()
 {
-	float x = 0.1f * sin(System::deltaTime);
-	float y = 0.0f;//0.001f * cos(System::deltaTime);
-	model = glm::translate(model, glm::vec3(x, y, 0.0f));
+	
+	model = glm::mat4(1.0f);
+	
+	
 
-	float angle = System::deltaTime * 70.0f;
+	/*float scaleFactor = 1.0f + 0.01f * sin(System::deltaTime);
+	model = glm::scale(model, glm::vec3(scaleFactor, scaleFactor, scaleFactor));*/
+	
+	
+	model = glm::translate(model, glm::vec3(transform.x, 0, 0));
+
+	//float angle = System::deltaTime * 10; // Slow, continuous rotation
+	model = glm::rotate(model, rotation.y, glm::vec3(0.0f, 1.0f, 0));
+
+	//float x = 10.0f * System::deltaTime; // Slow, smooth translation
+	//float y = 0.0f;
+	
+
+	/*
+	float angle = System::deltaTime * 5.0f;
 	model = glm::rotate(model, angle, glm::vec3(0.0f, 1.0f, 0.0f));
 
-	float scaleFactor = 1.0f + 0.01f * sin(System::deltaTime);
-	model = glm::scale(model, glm::vec3(scaleFactor, scaleFactor, scaleFactor));
-	
+	float x = -0.1f * sin(System::deltaTime);
+	float y = 0.0f;//0.001f * cos(System::deltaTime);
+	model = glm::translate(model, glm::vec3(x, y, 0.0f));
+	*/
 	
 
 	glm::mat4 view = glm::lookAt(

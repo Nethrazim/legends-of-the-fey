@@ -30,13 +30,13 @@ void SceneDesigner::prepareScene()
 	*/
 	GameObject* openGLgameObject = new GameObject();
 	openGLgameObject->layer = "enemies";
-	openGLgameObject->transform.x = 50;
-	openGLgameObject->transform.y = 50;
+	openGLgameObject->transform.x = 0;
+	openGLgameObject->transform.y = 0;
 	float vertices[] = {
 		// positions        // colors
-		-0.6f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,
-		 0.6f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,
-		 0.0f,  0.6f, 0.0f,  0.0f, 0.0f, 1.0f
+		-0.6f, -0.5f, 0.0f,  0.1f, 0.2f, 0.3f,
+		 0.6f, -0.5f, 0.0f,  0.4f, 1.0f, 0.6f,
+		 0.0f,  0.6f, 0.0f,  0.5f, 0.8f, 0.7f
 	};
 	
 	openGLgameObject->meshRenderer->setVertices(vertices, sizeof(vertices) / sizeof(float));
