@@ -3,6 +3,7 @@
 #include "glm/gtc/matrix_transform.hpp"
 
 #include "System.h"
+#include "Camera.h"
 
 
 GameObjects::GameObject::GameObject()
@@ -12,62 +13,48 @@ GameObjects::GameObject::GameObject()
 	meshRenderer->active = true;
 }
 
+
 void GameObjects::GameObject::update()
 {
-	if (this->layer == "enemies")
-	{
-		transform.x += 0.1f * System::deltaTime;
-		rotation.y += 10.0f * System::deltaTime;
-	}
-
-	updateMVP();
+	//scale.x = 0.9;
+	//scale.y = 0.9;
+	//scale.z = 0.9;
+	transform.x = System::deltaTime * 0.05f;
+	script();
+	calculateMVP(Camera::getInstance()->view, Camera::getInstance()->projection);
 }
 
-void GameObjects::GameObject::updateMVP()
+void GameObjects::GameObject::script()
 {
 	
-	model = glm::mat4(1.0f);
+	//default behavior
 	
-	
+	//rotate
+	model = glm::rotate(model, rotation.x, glm::vec3(1.0f, 0.0f, 0.0f));
+	model = glm::rotate(model, rotation.y, glm::vec3(0.0f, 1.0f, 0.0f));
+	model = glm::rotate(model, rotation.z, glm::vec3(0.0f, 0.0f, 1.0f));
 
-	/*float scaleFactor = 1.0f + 0.01f * sin(System::deltaTime);
-	model = glm::scale(model, glm::vec3(scaleFactor, scaleFactor, scaleFactor));*/
-	
-	
-	model = glm::translate(model, glm::vec3(transform.x, 0, 0));
+	//translate
+	model = glm::translate(model, glm::vec3(transform.x, transform.y, transform.z));
 
-	//float angle = System::deltaTime * 10; // Slow, continuous rotation
-	model = glm::rotate(model, rotation.y, glm::vec3(0.0f, 1.0f, 0));
+	//scale
+	model = glm::scale(model, glm::vec3(scale.x, scale.y, scale.z));
+}
 
-	//float x = 10.0f * System::deltaTime; // Slow, smooth translation
-	//float y = 0.0f;
-	
+glm::mat4 GameObjects::GameObject::getWorldModelMatrix()
+{
+	if (parent)
+	{
+		return parent->getWorldModelMatrix() * model;
+	}
 
-	/*
-	float angle = System::deltaTime * 5.0f;
-	model = glm::rotate(model, angle, glm::vec3(0.0f, 1.0f, 0.0f));
+	return model;
+}
 
-	float x = -0.1f * sin(System::deltaTime);
-	float y = 0.0f;//0.001f * cos(System::deltaTime);
-	model = glm::translate(model, glm::vec3(x, y, 0.0f));
-	*/
-	
-
-	glm::mat4 view = glm::lookAt(
-		glm::vec3(0.0f, 0.0f, 2.0f),
-		glm::vec3(0.0f, 0.0f, 0.0f),
-		glm::vec3(0.0f, 1.0f, 0.0f)
-	);
-
-	glm::mat4 projection = glm::perspective(
-		glm::radians(60.0f),
-		800.0f / 600.0f, // width / height
-		0.1f,         // near plane
-		100.0f        // far plane
-	);
-
-
-	uMVP = projection * view * model;
+void GameObjects::GameObject::calculateMVP(const glm::mat4& view, const glm::mat4& projection)
+{
+	glm::mat4 model = getWorldModelMatrix();
+	mvpMatrix =  projection * view * model;
 }
 
 GameObjects::GameObject::~GameObject()

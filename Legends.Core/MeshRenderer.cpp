@@ -3,6 +3,7 @@
 #include "ShaderUtils.h"
 #include "GameObject.h"
 #include <glm/gtc/type_ptr.hpp>
+#include "Camera.h"
 
 namespace GameObjects {
 	class GameObject;
@@ -99,17 +100,14 @@ void MeshRenderer::render(int width, int height, SDL_Window* window, SDL_GLConte
 		return;
 	}
 
-	
 	glUseProgram(program);
 	GLint uMVP = glGetUniformLocation(program, "uMVP"); // get uniform location
-	glUniformMatrix4fv(uMVP, 1, GL_FALSE, glm::value_ptr(gameObject->uMVP));
+	glUniformMatrix4fv(uMVP, 1, GL_FALSE, glm::value_ptr(gameObject->mvpMatrix));
 
 	glBindVertexArray(vao);
 
 	glDrawArrays(GL_TRIANGLES, 0, 3);
 
 	glBindVertexArray(0);
-	glUseProgram(0);
-	
-	
+	glUseProgram(0);	
 }

@@ -16,9 +16,9 @@ namespace GameObjects
 	{
 	
 	public:
-
 		std::string layer = "default";
-		
+
+		GameObject* parent = nullptr;
 		GameObject();
 		virtual ~GameObject();
 
@@ -26,12 +26,14 @@ namespace GameObjects
 		Rotation rotation;
 		Scale scale;
 		Sprite sprite;
-		MeshRenderer* meshRenderer;
+		MeshRenderer* meshRenderer;		
 
 		virtual void update();
-
+		virtual void script();
 		glm::mat4 model = glm::mat4(1.0f);
-		glm::mat4 uMVP = glm::mat4(1.0f);
-		virtual void updateMVP();
+		glm::mat4 getWorldModelMatrix();
+
+		glm::mat4 mvpMatrix;
+		void calculateMVP(const glm::mat4& view, const glm::mat4& projection);
 	};
 }

@@ -7,9 +7,9 @@ namespace GameObjects
 	{
 	public:
 
-		float x;
-		float y;
-		float z;
+		float x = 0;
+		float y = 0;
+		float z = 0;
 
 		void setX(float x);
 		void setY(float y);

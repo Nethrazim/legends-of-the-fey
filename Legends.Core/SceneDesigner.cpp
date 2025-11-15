@@ -1,10 +1,13 @@
 #include "SceneDesigner.h"
+#include "Camera.h"
 extern const char* vertex_triangle_basic_src; 
 extern const char* fragment_triangle_basic_src;
 
 
 void SceneDesigner::prepareScene()
 {
+	Camera::getInstance();
+
 	Scene* scene = new Scene("default");
 	/**scene->sceneTexture = SDL_CreateTexture(GameLoop::renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, 3840, 2160);
 	scene->tileMap = new TileMap();

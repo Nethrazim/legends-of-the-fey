@@ -5,7 +5,8 @@ namespace GameObjects
 	class Scale
 	{
 	public:
-		float x;
-		float y;
+		float x = 1.0f;
+		float y = 1.0f;
+		float z = 1.0f;
 	};
 }

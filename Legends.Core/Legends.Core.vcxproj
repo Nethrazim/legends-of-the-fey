@@ -162,6 +162,7 @@ xcopy /Y /D "$(ProjectDir)vcpkg_installed\x64-windows\bin\SDL2_image.dll" "$(Tar
     <ClCompile Include="AssetsLoader.cpp" />
     <ClCompile Include="AssetsManager.cpp" />
     <ClCompile Include="BMPLoader.cpp" />
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="GameSystem.cpp" />
@@ -197,6 +198,7 @@ xcopy /Y /D "$(ProjectDir)vcpkg_installed\x64-windows\bin\SDL2_image.dll" "$(Tar
     <ClInclude Include="AssetsLoader.h" />
     <ClInclude Include="AssetsManager.h" />
     <ClInclude Include="BMPLoader.h" />
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameLoop.h" />
     <ClInclude Include="GameSystem.h" />
