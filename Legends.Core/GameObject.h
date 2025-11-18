@@ -14,6 +14,8 @@ namespace GameObjects
 {
 	class GameObject
 	{
+	private:
+		std::vector<GameObject*> children;
 	
 	public:
 		std::string layer = "default";
@@ -27,6 +29,13 @@ namespace GameObjects
 		Scale scale;
 		Sprite sprite;
 		MeshRenderer* meshRenderer;		
+
+		void addChild(GameObject* child);
+		void removeChild(GameObject* child);
+		
+		std::vector<GameObject*>* getChildren() {
+			return &children;
+		}
 
 		virtual void update();
 		virtual void script();

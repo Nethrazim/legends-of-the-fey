@@ -7,19 +7,51 @@
 
 
 GameObjects::GameObject::GameObject()
-	: transform(), rotation(), scale(), sprite(), meshRenderer(nullptr)
+	: transform(), rotation(), scale(), sprite(), meshRenderer(nullptr), parent(nullptr)
 {
 	meshRenderer = new MeshRenderer(this);
 	meshRenderer->active = true;
 }
 
 
+void GameObjects::GameObject::addChild(GameObject* child)
+{
+	children.push_back(child);
+	child->parent = this;
+}
+
+void GameObjects::GameObject::removeChild(GameObject* child)
+{
+	auto it = std::find(children.begin(), children.end(), child);
+	if (it != children.end())
+	{
+		children.erase(it);
+		child->parent = nullptr;
+	}
+}
+
+
 void GameObjects::GameObject::update()
 {
+	model = glm::mat4(1.0f);
 	//scale.x += 0.0001f;
 	//scale.y += 0.0001f;
 	//scale.z += 0.0001f;
 	//transform.x = System::deltaTime * 0.05f;
+
+	if (getChildren()->size() > 0)
+	{
+		for (auto& child : *getChildren())
+		{
+			child->update();
+		}
+	}
+
+	if (parent)
+	{
+		transform.x += System::deltaTime * 10.0f;
+	}
+
 	script();
 	calculateMVP(Camera::getInstance()->view, Camera::getInstance()->projection);
 }

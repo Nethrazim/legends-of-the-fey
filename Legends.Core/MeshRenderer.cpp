@@ -106,6 +106,17 @@ void MeshRenderer::render(int width, int height, SDL_Window* window, SDL_GLConte
 		return;
 	}
 
+	if (gameObject->getChildren()->size() > 0)
+	{
+		for (auto& child : *gameObject->getChildren())
+		{
+			if (child->meshRenderer && child->meshRenderer->active)
+			{
+				child->meshRenderer->render(width, height, window, context);
+			}
+		}
+	}
+
 	glUseProgram(program);
 	GLint uMVP = glGetUniformLocation(program, "uMVP"); // get uniform location
 	glUniformMatrix4fv(uMVP, 1, GL_FALSE, glm::value_ptr(gameObject->mvpMatrix));

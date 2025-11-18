@@ -1,6 +1,6 @@
 #include "SceneDesigner.h"
 #include "Camera.h"
-extern const char* vertex_triangle_basic_src; 
+extern const char* vertex_triangle_basic_src;
 extern const char* fragment_triangle_basic_src;
 
 
@@ -35,6 +35,10 @@ void SceneDesigner::prepareScene()
 	openGLgameObject->layer = "enemies";
 	openGLgameObject->transform.x = 0;
 	openGLgameObject->transform.y = 0;
+	openGLgameObject->transform.z = 0;
+	openGLgameObject->scale.x = 2;
+	openGLgameObject->scale.y = 2;
+	openGLgameObject->scale.z = 2;
 	float vertices[] = {
 		// positions        // colors
 		// positions        // colors
@@ -48,25 +52,36 @@ void SceneDesigner::prepareScene()
 		2, 3, 0  // second triangle
 	};
 
-	
+
 	openGLgameObject->meshRenderer->setVertices(vertices, sizeof(vertices) / sizeof(float));
 	openGLgameObject->meshRenderer->createGLProgram(vertex_triangle_basic_src, fragment_triangle_basic_src);
 
 
 	GameObject* openGLgameObject2 = new GameObject();
 	openGLgameObject2->layer = "enemies";
-	openGLgameObject2->transform.x = 350;
-	openGLgameObject2->transform.y = 450;
+	openGLgameObject2->transform.x = 0;
+	openGLgameObject2->transform.y = 0;
+	openGLgameObject2->transform.z = 0;
+	openGLgameObject2->scale.x = 1;
+	openGLgameObject2->scale.y = 1;
+	openGLgameObject2->scale.z = 1;
+
 	float vertices2[] = {
 		// positions        // colors
-		-0.1f, -0.1f, 0.0f,  1.0f, 0.0f, 0.0f,
-		 0.2f, -0.2f, 0.0f,  0.0f, 1.0f, 0.0f,
-		 0.0f,  0.2f, 0.0f,  0.0f, 0.0f, 1.0f
+		-0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f, // bottom left (red)
+		 0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f, // bottom right (green)
+		 0.5f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f, // top right (blue)
+		-0.5f,  0.5f, 0.0f,  1.0f, 1.0f, 0.0f  // top left (yellow)
+	};
+
+	unsigned int indices2[] = {
+		0, 1, 2, // first triangle
 	};
 
 	openGLgameObject2->meshRenderer->setVertices(vertices2, sizeof(vertices2) / sizeof(float));
 	openGLgameObject2->meshRenderer->createGLProgram(vertex_triangle_basic_src, fragment_triangle_basic_src);
 
+	openGLgameObject->addChild(openGLgameObject2);
 	/**
 	GameObject* gameObject2 = new GameObject();
 	gameObject2->layer = "enemies";
