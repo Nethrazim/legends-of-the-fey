@@ -1,9 +1,0 @@
-B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/sdl_headers_copy.dir
-B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/SDL2main.dir
-B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/SDL2.dir
-B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/uninstall.dir
-B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/edit_cache.dir
-B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/rebuild_cache.dir
-B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/list_install_components.dir
-B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/install.dir
-B:/Workspace/legends-of-the-fey/Legends.Core/vcpkg_installed/vcpkg/blds/sdl2/x64-windows-rel/CMakeFiles/install/local.dir
