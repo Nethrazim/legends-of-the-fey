@@ -5,9 +5,20 @@
 
 LegendsCore::Assets::AssetsManager::AssetsManager() : bmpLoader(nullptr), imgLoader(nullptr) {}
 
+LegendsCore::Assets::AssetsManager* LegendsCore::Assets::AssetsManager::instance = nullptr;
+
+LegendsCore::Assets::AssetsManager* LegendsCore::Assets::AssetsManager::getInstance()
+{
+	if (instance == nullptr)
+	{
+		instance = new AssetsManager();
+	}
+	return instance;
+}
+
 void LegendsCore::Assets::AssetsManager::Load(std::string path, std::string fileName, SDL_Surface*& imgSurface)
 {
-	AssetsLoader* assetsLoader = createFactoryObject(fileName);
+	BaseAssetsLoader* assetsLoader = createFactoryObject(fileName);
 	if (!assetsLoader)
 	{
 		std::cout << "No Loader for that resource" << std::endl;
@@ -37,20 +48,33 @@ SDL_Texture* LegendsCore::Assets::AssetsManager::LoadTexture(std::string path, s
 	}
 
 	return texture;
-
 }
 
+void LegendsCore::Assets::AssetsManager::addSurface(SDL_Surface* surface, const std::string& key)
+{
+	if (loadedSurfaces.find(key) == loadedSurfaces.end())
+	{
+		loadedSurfaces[key] = surface;
+	}
+}
 
-LegendsCore::Assets::AssetsLoader* LegendsCore::Assets::AssetsManager::createFactoryObject(std::string fileName)
+bool LegendsCore::Assets::AssetsManager::surfaceExists(const std::string key)
+{
+	return loadedSurfaces.find(key) != loadedSurfaces.end();
+}
+
+LegendsCore::Assets::BaseAssetsLoader* LegendsCore::Assets::AssetsManager::createFactoryObject(std::string fileName)
 {
 	std::string extensionType = getExtension(fileName);
-	AssetsLoader* loader = nullptr;
+	BaseAssetsLoader* loader = nullptr;
 
 	if (extensionType == "bmp")
 	{
 		if (bmpLoader == nullptr)
 		{
 			loader = new BMPLoader();
+			loader->setAssetsManagerInstance(this);
+			
 			bmpLoader = static_cast<BMPLoader*>(loader);
 			return bmpLoader;
 		}
@@ -64,6 +88,8 @@ LegendsCore::Assets::AssetsLoader* LegendsCore::Assets::AssetsManager::createFac
 		if (imgLoader == nullptr)
 		{
 			loader = new IMGLoader();
+			loader->setAssetsManagerInstance(this);
+			
 			imgLoader = static_cast<IMGLoader*>(loader);
 			return imgLoader;
 		}
@@ -92,5 +118,24 @@ LegendsCore::Assets::AssetsManager::~AssetsManager()
 	if (bmpLoader != nullptr)
 	{
 		delete bmpLoader;
+		bmpLoader = nullptr;
+	}
+
+	if(imgLoader != nullptr)
+	{
+		delete imgLoader;
+		imgLoader = nullptr;
+	}
+
+	if(loadedSurfaces.size() > 0)
+	{
+		for (auto& pair : loadedSurfaces)
+		{
+			if (pair.second != nullptr)
+			{
+				SDL_FreeSurface(pair.second);
+			}
+		}
+		loadedSurfaces.clear();
 	}
 }

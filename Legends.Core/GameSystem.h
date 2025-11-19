@@ -17,7 +17,7 @@ public:
 
 	WindowManager windowManager;
 	GameLoop gameRenderer;
-	AssetsManager assetsManager;
+	AssetsManager* assetsManager;
 
 	void init();
 	void start();

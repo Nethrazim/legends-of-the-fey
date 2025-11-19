@@ -1,7 +1,9 @@
 
 #include "GameSystem.h"
 
-GameSystem::GameSystem() : width(0), height(0) {}
+GameSystem::GameSystem() : width(0), height(0) {
+	assetsManager = AssetsManager::getInstance();
+}
 
 void GameSystem::init()
 {

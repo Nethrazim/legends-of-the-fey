@@ -159,7 +159,7 @@ xcopy /Y /D "$(ProjectDir)vcpkg_installed\x64-windows\bin\SDL2_image.dll" "$(Tar
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AssetsLoader.cpp" />
+    <ClCompile Include="BaseAssetsLoader.cpp" />
     <ClCompile Include="AssetsManager.cpp" />
     <ClCompile Include="BMPLoader.cpp" />
     <ClCompile Include="Camera.cpp" />
@@ -195,7 +195,7 @@ xcopy /Y /D "$(ProjectDir)vcpkg_installed\x64-windows\bin\SDL2_image.dll" "$(Tar
     </CopyFileToFolders>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AssetsLoader.h" />
+    <ClInclude Include="BaseAssetsLoader.h" />
     <ClInclude Include="AssetsManager.h" />
     <ClInclude Include="BMPLoader.h" />
     <ClInclude Include="Camera.h" />

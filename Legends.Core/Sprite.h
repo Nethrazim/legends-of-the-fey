@@ -18,5 +18,5 @@ public:
 	int height = 64;
 private:
 	SDL_Surface* surface;
-	AssetsManager assetsManager;
+	AssetsManager* assetsManager;
 };

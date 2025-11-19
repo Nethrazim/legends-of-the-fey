@@ -66,7 +66,7 @@
     <ClCompile Include="Legends.Core.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AssetsLoader.cpp">
+    <ClCompile Include="BaseAssetsLoader.cpp">
       <Filter>AssetsManager</Filter>
     </ClCompile>
     <ClCompile Include="BMPLoader.cpp">
@@ -152,7 +152,7 @@
     <ClInclude Include="Scale.h">
       <Filter>GameObject\Transform</Filter>
     </ClInclude>
-    <ClInclude Include="AssetsLoader.h">
+    <ClInclude Include="BaseAssetsLoader.h">
       <Filter>AssetsManager</Filter>
     </ClInclude>
     <ClInclude Include="AssetsManager.h">

@@ -5,11 +5,12 @@ Sprite::Sprite(): assetsManager()
 {
 	surface = nullptr;
 	texture = nullptr;
+	assetsManager = AssetsManager::getInstance();
 }
 
 void Sprite::loadTexture(std::string path, std::string file) 
 {
-	assetsManager.Load(path, file, surface);
+	assetsManager->Load(path, file, surface);
 	texture = SDL_CreateTextureFromSurface(GameLoop::renderer, surface);
 	SDL_QueryTexture(texture, NULL, NULL, &width, &height);
 }

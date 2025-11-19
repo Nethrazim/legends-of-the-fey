@@ -3,18 +3,20 @@
 #include <SDL2/SDL_surface.h>
 #include <SDL2/SDL_image.h>
 
-#include "AssetsLoader.h"
+
+#include "BaseAssetsLoader.h"
 
 namespace LegendsCore
 {
-	namespace Assets
+	namespace Assets	
 	{
-		class IMGLoader : public AssetsLoader
+		class IMGLoader : public BaseAssetsLoader
 		{
 		public:
-			void Load(std::string path, std::string filename, SDL_Surface*&) override;
+			void Load(std::string path, std::string fileName, SDL_Surface*&) override;
+			SDL_Surface* Load(std::string fullPath) override;
 		};
-	}
-}
+;	};
+};	
 
 
