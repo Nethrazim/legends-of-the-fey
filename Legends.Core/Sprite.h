@@ -3,7 +3,7 @@
 #include <string>
 
 #include "GameLoop.h"
-#include "AssetsManager.h"
+#include "assets_manager.h"
 
 using namespace LegendsCore::Assets;
 

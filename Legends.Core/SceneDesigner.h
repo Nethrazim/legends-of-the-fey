@@ -1,7 +1,7 @@
 #pragma once
 #include "Scene.h"
 #include "SceneManager.h"
-#include "AssetsManager.h"
+#include "assets_manager.h"
 
 using LegendsCore::Assets::AssetsManager;
 

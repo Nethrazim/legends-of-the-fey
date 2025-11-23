@@ -2,7 +2,7 @@
 #include <map>
 #include <string>
 #include <SDL2/SDL_surface.h>
-#include "AssetsManager.h"
+#include "base_assets_loader.h"
 
 using namespace std;
 

@@ -1,4 +1,4 @@
-#include "BaseAssetsLoader.h"
+#include "base_assets_loader.h"
 
 
 LegendsCore::Assets::AssetsManager* LegendsCore::Assets::BaseAssetsLoader::getAssetsManager()

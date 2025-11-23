@@ -2,7 +2,7 @@
 #include <SDL2/SDL.h>
 #include "WindowManager.h"
 #include "GameLoop.h"
-#include "AssetsManager.h"
+#include "assets_manager.h"
 
 using namespace LegendsCore::Assets;
 

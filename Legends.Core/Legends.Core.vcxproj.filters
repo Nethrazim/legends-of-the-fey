@@ -40,17 +40,11 @@
     <Filter Include="GameObject">
       <UniqueIdentifier>{4b7ddc44-d58c-40b6-a5a1-bbd6a9d06e0f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GameObject\Transform">
-      <UniqueIdentifier>{8e231f38-33f7-4e2a-92bd-998b8d8a9f45}</UniqueIdentifier>
-    </Filter>
     <Filter Include="GameObject\GameObject">
       <UniqueIdentifier>{08def2a6-75bc-4683-a892-da9f396658b6}</UniqueIdentifier>
     </Filter>
     <Filter Include="GameObject\Scripts">
       <UniqueIdentifier>{b18550e0-b1c3-4f9a-a6a1-d780b6f256e8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="GameObject\MeshRenderer">
-      <UniqueIdentifier>{f9f8908b-c675-4192-a02f-0a223a3a7151}</UniqueIdentifier>
     </Filter>
     <Filter Include="ShaderUtils">
       <UniqueIdentifier>{95b9455b-bfab-42cc-bcd5-e71c7a04f4dd}</UniqueIdentifier>
@@ -61,28 +55,40 @@
     <Filter Include="ShaderUtils\Triangle\Basic">
       <UniqueIdentifier>{a081c57b-f595-4551-a793-fbba7f382541}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ShaderUtils\Triangle\barycentric">
+      <UniqueIdentifier>{6e4e0c5e-34a8-448e-9ae4-d92f978e37ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Components">
+      <UniqueIdentifier>{6d3aa0ff-62f2-4e41-b4cc-e1761c8eb61e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Components\MeshRenderer">
+      <UniqueIdentifier>{f9f8908b-c675-4192-a02f-0a223a3a7151}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Components\Transformation">
+      <UniqueIdentifier>{8e231f38-33f7-4e2a-92bd-998b8d8a9f45}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Legends.Core.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BaseAssetsLoader.cpp">
+    <ClCompile Include="base_assets_loader.cpp">
       <Filter>AssetsManager</Filter>
     </ClCompile>
-    <ClCompile Include="BMPLoader.cpp">
+    <ClCompile Include="bmp_loader.cpp">
       <Filter>AssetsManager</Filter>
     </ClCompile>
-    <ClCompile Include="AssetsManager.cpp">
+    <ClCompile Include="assets_manager.cpp">
       <Filter>AssetsManager</Filter>
     </ClCompile>
     <ClCompile Include="Transform.cpp">
-      <Filter>GameObject\Transform</Filter>
+      <Filter>GameObject\Components\Transformation</Filter>
     </ClCompile>
     <ClCompile Include="Rotation.cpp">
-      <Filter>GameObject\Transform</Filter>
+      <Filter>GameObject\Components\Transformation</Filter>
     </ClCompile>
     <ClCompile Include="Scale.cpp">
-      <Filter>GameObject\Transform</Filter>
+      <Filter>GameObject\Components\Transformation</Filter>
     </ClCompile>
     <ClCompile Include="WindowManager.cpp">
       <Filter>WindowManager</Filter>
@@ -100,12 +106,12 @@
       <Filter>GameSystem\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Sprite.cpp">
-      <Filter>GameObject\Transform</Filter>
+      <Filter>GameObject\Components\Transformation</Filter>
     </ClCompile>
     <ClCompile Include="SceneLayer.cpp">
       <Filter>GameSystem\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="IMGLoader.cpp">
+    <ClCompile Include="img_loader.cpp">
       <Filter>AssetsManager</Filter>
     </ClCompile>
     <ClCompile Include="InputState.cpp">
@@ -132,8 +138,8 @@
     <ClCompile Include="triangle_basic.cpp">
       <Filter>ShaderUtils\Triangle\Basic</Filter>
     </ClCompile>
-    <ClCompile Include="MeshRenderer.cpp">
-      <Filter>GameObject\MeshRenderer</Filter>
+    <ClCompile Include="base_mesh_renderer.cpp">
+      <Filter>GameObject\Components\MeshRenderer</Filter>
     </ClCompile>
     <ClCompile Include="ShaderUtils.cpp">
       <Filter>ShaderUtils</Filter>
@@ -141,24 +147,27 @@
     <ClCompile Include="Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="barycentric.cpp">
+      <Filter>ShaderUtils\Triangle\barycentric</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Transform.h">
-      <Filter>GameObject\Transform</Filter>
+      <Filter>GameObject\Components\Transformation</Filter>
     </ClInclude>
     <ClInclude Include="Rotation.h">
-      <Filter>GameObject\Transform</Filter>
+      <Filter>GameObject\Components\Transformation</Filter>
     </ClInclude>
     <ClInclude Include="Scale.h">
-      <Filter>GameObject\Transform</Filter>
+      <Filter>GameObject\Components\Transformation</Filter>
     </ClInclude>
-    <ClInclude Include="BaseAssetsLoader.h">
+    <ClInclude Include="base_assets_loader.h">
       <Filter>AssetsManager</Filter>
     </ClInclude>
-    <ClInclude Include="AssetsManager.h">
+    <ClInclude Include="assets_manager.h">
       <Filter>AssetsManager</Filter>
     </ClInclude>
-    <ClInclude Include="BMPLoader.h">
+    <ClInclude Include="bmp_loader.h">
       <Filter>AssetsManager</Filter>
     </ClInclude>
     <ClInclude Include="WindowManager.h">
@@ -177,7 +186,7 @@
       <Filter>GameSystem\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Sprite.h">
-      <Filter>GameObject\Transform</Filter>
+      <Filter>GameObject\Components\Transformation</Filter>
     </ClInclude>
     <ClInclude Include="SceneLayer.h">
       <Filter>GameSystem\Scene</Filter>
@@ -185,7 +194,7 @@
     <ClInclude Include="InputState.h">
       <Filter>InputManager</Filter>
     </ClInclude>
-    <ClInclude Include="IMGLoader.h">
+    <ClInclude Include="img_loader.h">
       <Filter>AssetsManager</Filter>
     </ClInclude>
     <ClInclude Include="InputManager.h">
@@ -209,8 +218,8 @@
     <ClInclude Include="GameObject.h">
       <Filter>GameObject\GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="MeshRenderer.h">
-      <Filter>GameObject\MeshRenderer</Filter>
+    <ClInclude Include="base_mesh_renderer.h">
+      <Filter>GameObject\Components\MeshRenderer</Filter>
     </ClInclude>
     <ClInclude Include="ShaderUtils.h">
       <Filter>ShaderUtils</Filter>

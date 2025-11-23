@@ -9,21 +9,23 @@ namespace GameObjects {
 using namespace GameObjects;
 
 using GameObjectPtr = GameObject*;
-class MeshRenderer
+
+
+class BaseMeshRenderer
 { 
 public:
 	GameObjectPtr gameObject = nullptr;
-	MeshRenderer(GameObjectPtr gameObject);
-	MeshRenderer(GameObjectPtr gameObject, float* newVertices, int size);
+	BaseMeshRenderer(GameObjectPtr gameObject);
+	BaseMeshRenderer(GameObjectPtr gameObject, float* newVertices, int size);
 
-	~MeshRenderer();
+	~BaseMeshRenderer();
 
 
 	bool active = false;
 
 	void setVertices(float* newVertices, int size);	
 	void createGLProgram(const char* vsSrc, const char* fsSrc);
-	void render(int width, int height, SDL_Window* window, SDL_GLContext context);
+	virtual void render(int width, int height, SDL_Window* window, SDL_GLContext context);
 
 private: 
 	bool programCreated = false;

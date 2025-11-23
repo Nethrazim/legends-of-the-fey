@@ -4,7 +4,7 @@
 #include <SDL2/SDL_image.h>
 
 
-#include "BaseAssetsLoader.h"
+#include "base_assets_loader.h"
 
 namespace LegendsCore
 {

@@ -1,7 +1,10 @@
 #include "SceneDesigner.h"
 #include "Camera.h"
+
 extern const char* vertex_triangle_basic_src;
 extern const char* fragment_triangle_basic_src;
+extern const char* vertex_triangle_barycentric_src;
+extern const char* fragment_triangle_barycentric_src;
 
 
 void SceneDesigner::prepareScene()
@@ -82,6 +85,31 @@ void SceneDesigner::prepareScene()
 	openGLgameObject2->meshRenderer->createGLProgram(vertex_triangle_basic_src, fragment_triangle_basic_src);
 
 	openGLgameObject->addChild(openGLgameObject2);
+
+	GameObject* shieldTriangle = new GameObject();
+	shieldTriangle->layer = "enemies";
+	shieldTriangle->transform.x = 0;
+	shieldTriangle->transform.y = 0;
+	shieldTriangle->transform.z = 0;
+	shieldTriangle->scale.x = 3;
+	shieldTriangle->scale.y = 3;
+	shieldTriangle->scale.z = 3;
+	float vertices3[] = {
+		// positions        // colors
+		// positions        // colors
+		0.0f, 0.5f, 0.0f,   1.0f, 0.0f, 0.0f, // A
+		-0.5f,-0.5f, 0.0f,   0.0f, 1.0f, 0.0f, // B
+		0.5f,-0.5f, 0.0f,   0.0f, 0.0f, 1.0f  // C
+	};
+	unsigned int indices3[] = {
+		0, 1, 2, // first triangle
+		2, 3, 0  // second triangle
+	};
+
+
+	shieldTriangle->meshRenderer->setVertices(vertices3, sizeof(vertices3) / sizeof(float));
+	shieldTriangle->meshRenderer->createGLProgram(vertex_triangle_barycentric_src, fragment_triangle_barycentric_src);
+
 	/**
 	GameObject* gameObject2 = new GameObject();
 	gameObject2->layer = "enemies";
@@ -102,8 +130,8 @@ void SceneDesigner::prepareScene()
 	//scene->addObject(map);
 	//scene->addObject(gameObject);
 	//scene->addObject(gameObject2);
-	scene->addObject(openGLgameObject);
+	//scene->addObject(openGLgameObject);
 	//scene->addObject(openGLgameObject2);
-
+	scene->addObject(shieldTriangle);
 	SceneManager::addScene(scene);
 }

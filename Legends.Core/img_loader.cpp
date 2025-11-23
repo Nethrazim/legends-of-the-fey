@@ -1,5 +1,5 @@
-#include "IMGLoader.h"
-
+#include "img_loader.h"
+#include "assets_manager.h"
 
 void LegendsCore::Assets::IMGLoader::Load(std::string path, std::string fileName, SDL_Surface*& imgSurface)
 {

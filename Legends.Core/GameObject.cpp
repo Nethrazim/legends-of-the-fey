@@ -9,7 +9,7 @@
 GameObjects::GameObject::GameObject()
 	: transform(), rotation(), scale(), sprite(), meshRenderer(nullptr), parent(nullptr)
 {
-	meshRenderer = new MeshRenderer(this);
+	meshRenderer = new BaseMeshRenderer(this);
 	meshRenderer->active = true;
 }
 
@@ -34,10 +34,13 @@ void GameObjects::GameObject::removeChild(GameObject* child)
 void GameObjects::GameObject::update()
 {
 	model = glm::mat4(1.0f);
+	
 	//scale.x += 0.0001f;
 	//scale.y += 0.0001f;
 	//scale.z += 0.0001f;
 	//transform.x = System::deltaTime * 0.05f;
+	rotation.y += System::deltaTime * 5;
+	rotation.z += System::deltaTime * 5;
 
 	if (getChildren()->size() > 0)
 	{

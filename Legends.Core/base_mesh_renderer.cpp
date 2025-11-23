@@ -1,5 +1,5 @@
 #include <iostream>
-#include "MeshRenderer.h"
+#include "base_mesh_renderer.h"
 #include "ShaderUtils.h"
 #include "GameObject.h"
 #include <glm/gtc/type_ptr.hpp>
@@ -11,18 +11,18 @@ namespace GameObjects {
 
 using GameObjectPtr = GameObject*;
 
-MeshRenderer::MeshRenderer(GameObjectPtr gameObject)
+BaseMeshRenderer::BaseMeshRenderer(GameObjectPtr gameObject)
 	: gameObject(gameObject), vertices(nullptr)
 {
 }
 
-MeshRenderer::MeshRenderer(GameObjectPtr gameObject, float *newVertices, int size)
+BaseMeshRenderer::BaseMeshRenderer(GameObjectPtr gameObject, float *newVertices, int size)
 	: gameObject(gameObject), vertices(nullptr)
 {
 	this->setVertices(newVertices, size);	
 }
 
-MeshRenderer::~MeshRenderer()
+BaseMeshRenderer::~BaseMeshRenderer()
 {
 	if (vertices)
 	{
@@ -31,7 +31,7 @@ MeshRenderer::~MeshRenderer()
 	}
 }
 
-void MeshRenderer::setVertices(float* newVertices, int size)
+void BaseMeshRenderer::setVertices(float* newVertices, int size)
 {
 	vertexSize = size;
 	if (vertices)
@@ -48,7 +48,7 @@ void MeshRenderer::setVertices(float* newVertices, int size)
 }	
 
 
-void MeshRenderer::createGLProgram(const char* vsSrc, const char* fsSrc)
+void BaseMeshRenderer::createGLProgram(const char* vsSrc, const char* fsSrc)
 {
 	vs = glCreateShader(GL_VERTEX_SHADER);
 	if (!CompileShader(vs, vsSrc))
@@ -74,14 +74,16 @@ void MeshRenderer::createGLProgram(const char* vsSrc, const char* fsSrc)
 
 	glGenVertexArrays(1, &vao);
 	glGenBuffers(1, &vbo);
-	glGenBuffers(1, &ebo);
+	//glGenBuffers(1, &ebo);
 
 	glBindVertexArray(vao);
+	
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
+	
 	glBufferData(GL_ARRAY_BUFFER, vertexSize * sizeof(float), vertices, GL_STATIC_DRAW);
 
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6 * sizeof(indices), indices, GL_STATIC_DRAW);
+	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
+	//glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6 * sizeof(indices), indices, GL_STATIC_DRAW);
 	
 	//layout
 	glEnableVertexAttribArray(0);
@@ -97,10 +99,10 @@ void MeshRenderer::createGLProgram(const char* vsSrc, const char* fsSrc)
 	programCreated = true;
 }
 
-void MeshRenderer::render(int width, int height, SDL_Window* window, SDL_GLContext context)
+void BaseMeshRenderer::render(int width, int height, SDL_Window* window, SDL_GLContext context)
 {
 	if (!programCreated) return;
-	
+
 	if (SDL_GL_MakeCurrent(window, context) != 0) {
 		std::cerr << "SDL_GL_MakeCurrent failed: " << SDL_GetError() << std::endl;
 		return;
@@ -121,21 +123,52 @@ void MeshRenderer::render(int width, int height, SDL_Window* window, SDL_GLConte
 	GLint uMVP = glGetUniformLocation(program, "uMVP"); // get uniform location
 	glUniformMatrix4fv(uMVP, 1, GL_FALSE, glm::value_ptr(gameObject->mvpMatrix));
 
-	GLint uTime = glGetUniformLocation(program, "uTime");
-	glUniform1f(uTime, static_cast<float>(SDL_GetTicks64()) / 1000.0f);
+	GLint uEdgeColor = glGetUniformLocation(program, "edgeColor"); // get uniform location
+	glUniform3fv(uEdgeColor, 1, glm::value_ptr(glm::vec3(0,0,0.875)));
 
-	if (!cTimeApplied)
+	GLint uFillColor = glGetUniformLocation(program, "fillColor"); // get uniform location
+	glUniform3fv(uFillColor, 1, glm::value_ptr(glm::vec3(0.3,0.9,0.2)));
+
+
+	static float uEdgeWidthValue = 0.1f;
+	static bool uEdgeWidthIncreasing = true;
+
+
+	if (uEdgeWidthIncreasing && uEdgeWidthValue < 1.0f)
 	{
-		GLint cTime = glGetUniformLocation(program, "cTime");
-		glUniform1f(cTime, static_cast<float>(SDL_GetTicks64()) / 1000.0f);
-		cTimeApplied = true;
+		uEdgeWidthValue += 0.05f;
 	}
-	
+	else if (uEdgeWidthIncreasing && uEdgeWidthIncreasing >= 1.0f)
+	{
+		uEdgeWidthIncreasing = false;
+	}
+
+
+	if (!uEdgeWidthIncreasing && uEdgeWidthValue > 0.1f)
+	{
+		uEdgeWidthValue -= 0.05;
+	}
+	else if (!uEdgeWidthIncreasing && uEdgeWidthValue <= 0.1f)
+	{
+		uEdgeWidthIncreasing = true;
+	}
+
+
+	GLint uEdgeWidth = glGetUniformLocation(program, "uEdgeWidth");
+	glUniform1f(uEdgeWidth, uEdgeWidthValue);
+
+	//if (!cTimeApplied)
+	//{
+		//GLint cTime = glGetUniformLocation(program, "cTime");
+		//glUniform1f(cTime, static_cast<float>(SDL_GetTicks64()) / 1000.0f);
+		//cTimeApplied = true;
+	//}
+
 
 	glBindVertexArray(vao);
 
-	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT,0);
+	glDrawArrays(GL_TRIANGLES, 0, 3);
 
 	glBindVertexArray(0);
-	glUseProgram(0);	
+	glUseProgram(0);
 }

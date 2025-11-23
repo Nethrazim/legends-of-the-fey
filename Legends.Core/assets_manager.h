@@ -7,7 +7,7 @@
 #include <SDL2/SDL_surface.h>
 #include <iostream>
 
-#include "BaseAssetsLoader.h"
+#include "base_assets_loader.h"
 
 class GameLoop;
 

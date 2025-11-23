@@ -1,4 +1,5 @@
-#include "BMPLoader.h"
+#include "bmp_loader.h"
+#include "assets_manager.h"
 
 void LegendsCore::Assets::BMPLoader::Load(std::string path, std::string fileName, SDL_Surface*& imgSurface)
 {

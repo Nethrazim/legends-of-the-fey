@@ -7,7 +7,7 @@
 #include "Rotation.h"
 #include "Scale.h"
 #include "Sprite.h"
-#include "MeshRenderer.h"
+#include "base_mesh_renderer.h"
 #include "glm/glm.hpp"
 
 namespace GameObjects
@@ -28,7 +28,7 @@ namespace GameObjects
 		Rotation rotation;
 		Scale scale;
 		Sprite sprite;
-		MeshRenderer* meshRenderer;		
+		BaseMeshRenderer* meshRenderer;		
 
 		void addChild(GameObject* child);
 		void removeChild(GameObject* child);

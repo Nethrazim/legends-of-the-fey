@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include "BaseAssetsLoader.h"
+#include "base_assets_loader.h"
 #include <SDL2/SDL_surface.h>
 
 

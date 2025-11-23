@@ -159,17 +159,18 @@ xcopy /Y /D "$(ProjectDir)vcpkg_installed\x64-windows\bin\SDL2_image.dll" "$(Tar
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BaseAssetsLoader.cpp" />
-    <ClCompile Include="AssetsManager.cpp" />
-    <ClCompile Include="BMPLoader.cpp" />
+    <ClCompile Include="barycentric.cpp" />
+    <ClCompile Include="base_assets_loader.cpp" />
+    <ClCompile Include="assets_manager.cpp" />
+    <ClCompile Include="bmp_loader.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="GameSystem.cpp" />
-    <ClCompile Include="MeshRenderer.cpp" />
+    <ClCompile Include="base_mesh_renderer.cpp" />
     <ClCompile Include="ShaderUtils.cpp" />
     <ClCompile Include="glad.c" />
-    <ClCompile Include="IMGLoader.cpp" />
+    <ClCompile Include="img_loader.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="InputState.cpp" />
     <ClCompile Include="Legends.Core.cpp" />
@@ -195,17 +196,17 @@ xcopy /Y /D "$(ProjectDir)vcpkg_installed\x64-windows\bin\SDL2_image.dll" "$(Tar
     </CopyFileToFolders>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BaseAssetsLoader.h" />
-    <ClInclude Include="AssetsManager.h" />
-    <ClInclude Include="BMPLoader.h" />
+    <ClInclude Include="base_assets_loader.h" />
+    <ClInclude Include="assets_manager.h" />
+    <ClInclude Include="bmp_loader.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameLoop.h" />
     <ClInclude Include="GameSystem.h" />
-    <ClInclude Include="MeshRenderer.h" />
+    <ClInclude Include="base_mesh_renderer.h" />
     <ClInclude Include="ShaderUtils.h" />
     <ClInclude Include="glad.h" />
-    <ClInclude Include="IMGLoader.h" />
+    <ClInclude Include="img_loader.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="InputState.h" />
     <ClInclude Include="khrplatform.h" />
