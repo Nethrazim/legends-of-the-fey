@@ -72,31 +72,37 @@ void BaseMeshRenderer::createGLProgram(const char* vsSrc, const char* fsSrc)
 		return;
 	}
 
+	setUpProgramAttributes();
+	
+	programCreated = true;
+}
+
+void BaseMeshRenderer::setUpProgramAttributes()
+{
+	// This function can be overridden in derived classes to set up additional attributes if needed.
 	glGenVertexArrays(1, &vao);
 	glGenBuffers(1, &vbo);
 	//glGenBuffers(1, &ebo);
 
 	glBindVertexArray(vao);
-	
+
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
-	
+
 	glBufferData(GL_ARRAY_BUFFER, vertexSize * sizeof(float), vertices, GL_STATIC_DRAW);
 
 	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
 	//glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6 * sizeof(indices), indices, GL_STATIC_DRAW);
-	
+
 	//layout
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
-	
+
 	glEnableVertexAttribArray(1);
 	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
 
 	glBindVertexArray(0);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-
-	programCreated = true;
 }
 
 void BaseMeshRenderer::render(int width, int height, SDL_Window* window, SDL_GLContext context)

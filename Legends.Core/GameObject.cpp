@@ -38,9 +38,11 @@ void GameObjects::GameObject::update()
 	//scale.x += 0.0001f;
 	//scale.y += 0.0001f;
 	//scale.z += 0.0001f;
-	//transform.x = System::deltaTime * 0.05f;
-	rotation.y += System::deltaTime * 5;
-	rotation.z += System::deltaTime * 5;
+	transform.x += System::deltaTime * 5.0f;
+	//std::cout << "Transform.x = " << transform.x << std::endl;
+	rotation.x += System::deltaTime * 5;
+	//rotation.y += System::deltaTime * 5;
+	//rotation.z += System::deltaTime * 5;
 
 	if (getChildren()->size() > 0)
 	{

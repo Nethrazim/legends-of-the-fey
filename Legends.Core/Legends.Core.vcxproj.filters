@@ -67,6 +67,12 @@
     <Filter Include="GameObject\Components\Transformation">
       <UniqueIdentifier>{8e231f38-33f7-4e2a-92bd-998b8d8a9f45}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SceneDesigner">
+      <UniqueIdentifier>{ce50c667-3fb2-4476-bfe4-e0cee6942d2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SceneDesigner\Scene1">
+      <UniqueIdentifier>{ecbf0050-0492-461f-b1f2-19cac23d443e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Legends.Core.cpp">
@@ -120,9 +126,6 @@
     <ClCompile Include="InputManager.cpp">
       <Filter>InputManager</Filter>
     </ClCompile>
-    <ClCompile Include="SceneDesigner.cpp">
-      <Filter>GameSystem\Scene</Filter>
-    </ClCompile>
     <ClCompile Include="TileMap.cpp">
       <Filter>GameSystem\Scene</Filter>
     </ClCompile>
@@ -149,6 +152,12 @@
     </ClCompile>
     <ClCompile Include="barycentric.cpp">
       <Filter>ShaderUtils\Triangle\barycentric</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneDesigner.cpp">
+      <Filter>SceneDesigner</Filter>
+    </ClCompile>
+    <ClCompile Include="textured_triangle_mesh_renderer.cpp">
+      <Filter>SceneDesigner\Scene1</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -200,9 +209,6 @@
     <ClInclude Include="InputManager.h">
       <Filter>InputManager</Filter>
     </ClInclude>
-    <ClInclude Include="SceneDesigner.h">
-      <Filter>GameSystem\Scene</Filter>
-    </ClInclude>
     <ClInclude Include="System.h">
       <Filter>GameSystem\Scene</Filter>
     </ClInclude>
@@ -226,6 +232,12 @@
     </ClInclude>
     <ClInclude Include="Camera.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneDesigner.h">
+      <Filter>SceneDesigner</Filter>
+    </ClInclude>
+    <ClInclude Include="textured_triangle_mesh_renderer.h">
+      <Filter>SceneDesigner\Scene1</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -4,7 +4,7 @@ Camera* Camera::instance = nullptr;
 
 Camera::Camera() : view(1.0f), projection(1.0f) {
 
-    eye = vec3(0.0f, 0.0f, 10.0f);
+    eye = vec3(0.0f, 0.0f, 50.0f);
     center = vec3(0.0f, 0.0f, 0.0f);
     up = vec3(0.0f, 1.0f, 0.0f);
 
