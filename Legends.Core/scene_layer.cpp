@@ -1,4 +1,4 @@
-#include "SceneLayer.h"
+#include "scene_layer.h"
 #include <string>
 
 int SceneLayer::rows = 64;

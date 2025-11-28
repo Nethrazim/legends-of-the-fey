@@ -1,7 +1,7 @@
 #include <iostream>
 #include "base_mesh_renderer.h"
-#include "ShaderUtils.h"
-#include "GameObject.h"
+#include "shader_utils.h"
+#include "game_object.h"
 #include <glm/gtc/type_ptr.hpp>
 #include "Camera.h"
 

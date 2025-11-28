@@ -1,4 +1,4 @@
-#include "TileMap.h"
+#include "tile_map.h"
 
 TileMap::TileMap() : wTiles(256), hTiles(256), tileMap(nullptr) 
 {

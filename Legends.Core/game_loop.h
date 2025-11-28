@@ -1,5 +1,5 @@
 #pragma once
-#include "InputManager.h"
+#include "input_manager.h"
 #include <SDL2/SDL.h>
 
 struct SDL_Window;

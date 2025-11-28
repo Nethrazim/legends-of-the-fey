@@ -5,9 +5,9 @@
 #include <memory>
 #include <map>
 
-#include "GameObject.h"
-#include "SceneLayer.h"
-#include "TileMap.h"
+#include "game_object.h"
+#include "scene_layer.h"
+#include "tile_map.h"
 
 class GameLoop;
 

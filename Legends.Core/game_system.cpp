@@ -1,5 +1,5 @@
 
-#include "GameSystem.h"
+#include "game_system.h"
 
 GameSystem::GameSystem() : width(0), height(0) {
 	assetsManager = AssetsManager::getInstance();

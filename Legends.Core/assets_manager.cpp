@@ -1,7 +1,7 @@
 #include "assets_manager.h"
 #include "bmp_loader.h"
 #include "img_loader.h"
-#include "GameLoop.h"
+#include "game_loop.h"
 
 LegendsCore::Assets::AssetsManager::AssetsManager() : bmpLoader(nullptr), imgLoader(nullptr) {}
 

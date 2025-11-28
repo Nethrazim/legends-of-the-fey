@@ -1,6 +1,7 @@
-#include "GameObject.h"
+#include "game_object.h"
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
+#include "glm/gtc/quaternion.hpp"
 
 #include "System.h"
 #include "Camera.h"
@@ -38,11 +39,27 @@ void GameObjects::GameObject::update()
 	//scale.x += 0.0001f;
 	//scale.y += 0.0001f;
 	//scale.z += 0.0001f;
-	transform.x += System::deltaTime * 5.0f;
+	transform.x = System::deltaTime * 5.0f;
 	//std::cout << "Transform.x = " << transform.x << std::endl;
-	rotation.x += System::deltaTime * 5;
-	//rotation.y += System::deltaTime * 5;
-	//rotation.z += System::deltaTime * 5;
+	rotation.x = System::deltaTime * 0.5f;
+	rotation.y = System::deltaTime * 1.25;
+	rotation.z = System::deltaTime * 1.25;
+	
+	glm::quat rotX = glm::angleAxis(rotation.x, glm::vec3(1.0f, 0.0f, 0.0f));
+	glm::quat rotY = glm::angleAxis(rotation.y, glm::vec3(0.0f, 1.0f, 0.0f));
+	glm::quat rotZ = glm::angleAxis(rotation.z, glm::vec3(0.0f, 0.0f, 1.0f));
+
+	orientation = rotX * orientation;
+	orientation = glm::normalize(orientation);
+
+	orientation = rotY * orientation;
+	orientation = glm::normalize(orientation);
+
+
+	orientation = rotZ * orientation;
+	orientation = glm::normalize(orientation);
+
+
 
 	if (getChildren()->size() > 0)
 	{
@@ -66,16 +83,21 @@ void GameObjects::GameObject::script()
 	
 	//default behavior
 	
-	//rotate
-	model = glm::rotate(model, rotation.x, glm::vec3(1.0f, 0.0f, 0.0f));
-	model = glm::rotate(model, rotation.y, glm::vec3(0.0f, 1.0f, 0.0f));
-	model = glm::rotate(model, rotation.z, glm::vec3(0.0f, 0.0f, 1.0f));
-
-	//translate
+	// 1. Translate
 	model = glm::translate(model, glm::vec3(transform.x, transform.y, transform.z));
 
-	//scale
+	// 2. Rotate using the quaternion
+	model = model * glm::mat4_cast(orientation);
+
+	// 3. Scale
 	model = glm::scale(model, glm::vec3(scale.x, scale.y, scale.z));
+	//model = glm::rotate(model, rotation.x, glm::vec3(1.0f, 0.0f, 0.0f));
+	//model = glm::rotate(model, rotation.y, glm::vec3(0.0f, 1.0f, 0.0f));
+	//model = glm::rotate(model, rotation.z, glm::vec3(0.0f, 0.0f, 1.0f));
+	
+
+	//scale
+	//model = glm::scale(model, glm::vec3(scale.x, scale.y, scale.z));
 }
 
 glm::mat4 GameObjects::GameObject::getWorldModelMatrix()

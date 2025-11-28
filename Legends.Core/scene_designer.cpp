@@ -1,12 +1,15 @@
-#include "SceneDesigner.h"
-#include "Camera.h"
+#include "scene_designer.h"
+#include "camera.h"
 #include "textured_triangle_mesh_renderer.h"
 #include "base_mesh_renderer.h"
+#include "cube_textured_mesh_renderer.h"
 
 extern const char* vertex_triangle_basic_src;
 extern const char* fragment_triangle_basic_src;
 extern const char* vertex_triangle_barycentric_src;
 extern const char* fragment_triangle_barycentric_src;
+extern const char* cube_vertex_shader;
+extern const char* cube_fragment_shader;
 
 
 void SceneDesigner::prepareScene()
@@ -70,6 +73,20 @@ void SceneDesigner::prepareScene()
 	shieldTriangle->meshRenderer->setVertices(vertices3, sizeof(vertices3) / sizeof(float));
 	shieldTriangle->meshRenderer->createGLProgram(vertex_triangle_barycentric_src, fragment_triangle_barycentric_src);
 
+
+	GameObject* cube = new GameObject();
+	cube->layer = "enemies";
+	cube->transform.x = 5;
+	cube->transform.y = 5;
+	cube->transform.z = 0;
+	cube->scale.x = 8;
+	cube->scale.y = 8;
+	cube->scale.z = 8;
+
+
+	cube->meshRenderer = static_cast<BaseMeshRenderer*>(new CubeTexturedMeshRenderer(cube));
+	cube->meshRenderer->createGLProgram(cube_vertex_shader, cube_fragment_shader);
+
 	/**
 	GameObject* gameObject2 = new GameObject();
 	gameObject2->layer = "enemies";
@@ -93,7 +110,8 @@ void SceneDesigner::prepareScene()
 	//scene->addObject(openGLgameObject);
 	//scene->addObject(openGLgameObject2);
 	
-	scene->addObject(shieldTriangle);
-	scene->addObject(openGLgameObject2);
+	//scene->addObject(shieldTriangle);
+	//scene->addObject(openGLgameObject2);
+	scene->addObject(cube);
 	SceneManager::addScene(scene);
 }

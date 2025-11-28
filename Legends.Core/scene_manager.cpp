@@ -1,4 +1,4 @@
-#include "SceneManager.h"
+#include "scene_manager.h"
 
 int SceneManager::currentIndex = -1;
 std::vector<Scene*>* SceneManager::scenes = new std::vector<Scene*>();

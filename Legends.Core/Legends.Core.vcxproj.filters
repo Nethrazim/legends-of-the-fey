@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="GameAssets">
-      <UniqueIdentifier>{622aed61-31e7-4614-af97-1a2833c70cba}</UniqueIdentifier>
-    </Filter>
     <Filter Include="AssetsManager">
       <UniqueIdentifier>{12c7b33d-8599-4c8c-94bc-0cffbb64d133}</UniqueIdentifier>
     </Filter>
@@ -73,9 +70,21 @@
     <Filter Include="SceneDesigner\Scene1">
       <UniqueIdentifier>{ecbf0050-0492-461f-b1f2-19cac23d443e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Camera">
+      <UniqueIdentifier>{d46723a5-b788-41cd-a617-8c82d621c234}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ShaderUtils\Cube">
+      <UniqueIdentifier>{4293ce0d-a264-4230-8ade-916a1fe9fb45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameStructs">
+      <UniqueIdentifier>{f050a3d9-124e-4e86-9360-14f8a76b97ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{622aed61-31e7-4614-af97-1a2833c70cba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Legends.Core.cpp">
+    <ClCompile Include="Legends.Core.Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="base_assets_loader.cpp">
@@ -87,55 +96,55 @@
     <ClCompile Include="assets_manager.cpp">
       <Filter>AssetsManager</Filter>
     </ClCompile>
-    <ClCompile Include="Transform.cpp">
+    <ClCompile Include="transform.cpp">
       <Filter>GameObject\Components\Transformation</Filter>
     </ClCompile>
-    <ClCompile Include="Rotation.cpp">
+    <ClCompile Include="rotation.cpp">
       <Filter>GameObject\Components\Transformation</Filter>
     </ClCompile>
-    <ClCompile Include="Scale.cpp">
+    <ClCompile Include="scale.cpp">
       <Filter>GameObject\Components\Transformation</Filter>
     </ClCompile>
-    <ClCompile Include="WindowManager.cpp">
+    <ClCompile Include="window_manager.cpp">
       <Filter>WindowManager</Filter>
     </ClCompile>
-    <ClCompile Include="GameLoop.cpp">
+    <ClCompile Include="game_loop.cpp">
       <Filter>GameLoop</Filter>
     </ClCompile>
-    <ClCompile Include="GameSystem.cpp">
+    <ClCompile Include="game_system.cpp">
       <Filter>GameSystem</Filter>
     </ClCompile>
-    <ClCompile Include="SceneManager.cpp">
+    <ClCompile Include="scene_manager.cpp">
       <Filter>GameSystem\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="Scene.cpp">
+    <ClCompile Include="scene.cpp">
       <Filter>GameSystem\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="Sprite.cpp">
+    <ClCompile Include="sprite.cpp">
       <Filter>GameObject\Components\Transformation</Filter>
     </ClCompile>
-    <ClCompile Include="SceneLayer.cpp">
+    <ClCompile Include="scene_layer.cpp">
       <Filter>GameSystem\Scene</Filter>
     </ClCompile>
     <ClCompile Include="img_loader.cpp">
       <Filter>AssetsManager</Filter>
     </ClCompile>
-    <ClCompile Include="InputState.cpp">
+    <ClCompile Include="input_state.cpp">
       <Filter>InputManager</Filter>
     </ClCompile>
-    <ClCompile Include="InputManager.cpp">
+    <ClCompile Include="input_manager.cpp">
       <Filter>InputManager</Filter>
     </ClCompile>
-    <ClCompile Include="TileMap.cpp">
+    <ClCompile Include="tile_map.cpp">
       <Filter>GameSystem\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="System.cpp">
+    <ClCompile Include="system.cpp">
       <Filter>GameSystem\SystemTick</Filter>
     </ClCompile>
     <ClCompile Include="glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject.cpp">
+    <ClCompile Include="game_object.cpp">
       <Filter>GameObject\GameObject</Filter>
     </ClCompile>
     <ClCompile Include="triangle_basic.cpp">
@@ -144,30 +153,39 @@
     <ClCompile Include="base_mesh_renderer.cpp">
       <Filter>GameObject\Components\MeshRenderer</Filter>
     </ClCompile>
-    <ClCompile Include="ShaderUtils.cpp">
+    <ClCompile Include="shader_utils.cpp">
       <Filter>ShaderUtils</Filter>
-    </ClCompile>
-    <ClCompile Include="Camera.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="barycentric.cpp">
       <Filter>ShaderUtils\Triangle\barycentric</Filter>
     </ClCompile>
-    <ClCompile Include="SceneDesigner.cpp">
+    <ClCompile Include="scene_designer.cpp">
       <Filter>SceneDesigner</Filter>
     </ClCompile>
     <ClCompile Include="textured_triangle_mesh_renderer.cpp">
       <Filter>SceneDesigner\Scene1</Filter>
     </ClCompile>
+    <ClCompile Include="opengl_texture_loader.cpp">
+      <Filter>AssetsManager</Filter>
+    </ClCompile>
+    <ClCompile Include="camera.cpp">
+      <Filter>GameObject\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="cube_textured_mesh_renderer.cpp">
+      <Filter>SceneDesigner\Scene1</Filter>
+    </ClCompile>
+    <ClCompile Include="textured_cube_shaders.cpp">
+      <Filter>ShaderUtils\Cube</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Transform.h">
+    <ClInclude Include="transform.h">
       <Filter>GameObject\Components\Transformation</Filter>
     </ClInclude>
-    <ClInclude Include="Rotation.h">
+    <ClInclude Include="rotation.h">
       <Filter>GameObject\Components\Transformation</Filter>
     </ClInclude>
-    <ClInclude Include="Scale.h">
+    <ClInclude Include="scale.h">
       <Filter>GameObject\Components\Transformation</Filter>
     </ClInclude>
     <ClInclude Include="base_assets_loader.h">
@@ -179,40 +197,37 @@
     <ClInclude Include="bmp_loader.h">
       <Filter>AssetsManager</Filter>
     </ClInclude>
-    <ClInclude Include="WindowManager.h">
+    <ClInclude Include="window_manager.h">
       <Filter>WindowManager</Filter>
     </ClInclude>
-    <ClInclude Include="GameLoop.h">
+    <ClInclude Include="game_loop.h">
       <Filter>GameLoop</Filter>
     </ClInclude>
-    <ClInclude Include="GameSystem.h">
+    <ClInclude Include="game_system.h">
       <Filter>GameSystem</Filter>
     </ClInclude>
-    <ClInclude Include="SceneManager.h">
+    <ClInclude Include="scene_manager.h">
       <Filter>GameSystem\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Scene.h">
+    <ClInclude Include="scene.h">
       <Filter>GameSystem\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Sprite.h">
+    <ClInclude Include="sprite.h">
       <Filter>GameObject\Components\Transformation</Filter>
     </ClInclude>
-    <ClInclude Include="SceneLayer.h">
+    <ClInclude Include="scene_layer.h">
       <Filter>GameSystem\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="InputState.h">
+    <ClInclude Include="input_state.h">
       <Filter>InputManager</Filter>
     </ClInclude>
     <ClInclude Include="img_loader.h">
       <Filter>AssetsManager</Filter>
     </ClInclude>
-    <ClInclude Include="InputManager.h">
+    <ClInclude Include="input_manager.h">
       <Filter>InputManager</Filter>
     </ClInclude>
-    <ClInclude Include="System.h">
-      <Filter>GameSystem\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="TileMap.h">
+    <ClInclude Include="tile_map.h">
       <Filter>GameSystem\Scene</Filter>
     </ClInclude>
     <ClInclude Include="glad.h">
@@ -221,40 +236,55 @@
     <ClInclude Include="khrplatform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GameObject.h">
+    <ClInclude Include="game_object.h">
       <Filter>GameObject\GameObject</Filter>
     </ClInclude>
     <ClInclude Include="base_mesh_renderer.h">
       <Filter>GameObject\Components\MeshRenderer</Filter>
     </ClInclude>
-    <ClInclude Include="ShaderUtils.h">
+    <ClInclude Include="shader_utils.h">
       <Filter>ShaderUtils</Filter>
     </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneDesigner.h">
+    <ClInclude Include="scene_designer.h">
       <Filter>SceneDesigner</Filter>
     </ClInclude>
     <ClInclude Include="textured_triangle_mesh_renderer.h">
       <Filter>SceneDesigner\Scene1</Filter>
     </ClInclude>
+    <ClInclude Include="opengl_texture_loader.h">
+      <Filter>AssetsManager</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>GameObject\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="cube_textured_mesh_renderer.h">
+      <Filter>SceneDesigner\Scene1</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game_structs.h">
+      <Filter>GameStructs</Filter>
+    </ClInclude>
+    <ClInclude Include="system.h">
+      <Filter>GameSystem\SystemTick</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="hello_world.bmp">
-      <Filter>GameAssets</Filter>
+      <Filter>Assets</Filter>
     </CopyFileToFolders>
     <CopyFileToFolders Include="map.png">
-      <Filter>GameAssets</Filter>
+      <Filter>Assets</Filter>
     </CopyFileToFolders>
     <CopyFileToFolders Include="tile.jpg">
-      <Filter>GameAssets</Filter>
+      <Filter>Assets</Filter>
     </CopyFileToFolders>
     <CopyFileToFolders Include="tile_sand_and_flock_of_grass.jpg">
-      <Filter>GameAssets</Filter>
+      <Filter>Assets</Filter>
     </CopyFileToFolders>
     <CopyFileToFolders Include="tile_w2.jpg">
-      <Filter>GameAssets</Filter>
+      <Filter>Assets</Filter>
     </CopyFileToFolders>
   </ItemGroup>
   <ItemGroup>
@@ -262,5 +292,10 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Legends.Core.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

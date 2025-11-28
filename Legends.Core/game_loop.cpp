@@ -1,10 +1,10 @@
 #include <iostream>
 #include <stdio.h>
 #include <SDL2/SDL.h>
-#include "GameLoop.h"
-#include "InputManager.h"
-#include "SceneManager.h"
-#include "Scene.h"
+#include "game_loop.h"
+#include "input_manager.h"
+#include "scene_manager.h"
+#include "scene.h"
 
 #include "System.h"
 extern SDL_GLContext context_;
@@ -39,21 +39,26 @@ bool GameLoop::start()
 		printf("SDL Renderer not set");
 	}
 
+	if (SDL_GL_MakeCurrent(window, context_) != 0) {
+		std::cerr << "SDL_GL_MakeCurrent failed: " << SDL_GetError() << std::endl;
+	}
+
+	//glEnable(GL_BLEND);
+	//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	glEnable(GL_DEPTH_TEST);   // Always use depth testing with culling
+	glDepthFunc(GL_LESS);
+	glEnable(GL_CULL_FACE);    // enable culling
+	glCullFace(GL_BACK);     // Cull back faces
+	glFrontFace(GL_CCW);       // CCW is front face
+
+
 	loop();
 }
 
 void GameLoop::loop()
 {
 	isRunning = true;
-	if (SDL_GL_MakeCurrent(window, context_) != 0) {
-		std::cerr << "SDL_GL_MakeCurrent failed: " << SDL_GetError() << std::endl;
-		return;
-	}
-
-
-	glEnable(GL_BLEND);
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
+	
 	while (isRunning)
 	{
 		System::startTimeFrame = SDL_GetTicks64();

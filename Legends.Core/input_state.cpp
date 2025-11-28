@@ -1,4 +1,4 @@
-#include "InputState.h"
+#include "input_state.h"
 
 void InputState::update(const SDL_Event& event) {
 	

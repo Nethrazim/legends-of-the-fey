@@ -163,30 +163,33 @@ xcopy /Y /D "$(ProjectDir)vcpkg_installed\x64-windows\bin\SDL2_image.dll" "$(Tar
     <ClCompile Include="base_assets_loader.cpp" />
     <ClCompile Include="assets_manager.cpp" />
     <ClCompile Include="bmp_loader.cpp" />
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="GameLoop.cpp" />
-    <ClCompile Include="GameSystem.cpp" />
+    <ClCompile Include="camera.cpp" />
+    <ClCompile Include="cube_textured_mesh_renderer.cpp" />
+    <ClCompile Include="game_object.cpp" />
+    <ClCompile Include="game_loop.cpp" />
+    <ClCompile Include="game_system.cpp" />
     <ClCompile Include="base_mesh_renderer.cpp" />
-    <ClCompile Include="ShaderUtils.cpp" />
+    <ClCompile Include="opengl_texture_loader.cpp" />
+    <ClCompile Include="shader_utils.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="img_loader.cpp" />
-    <ClCompile Include="InputManager.cpp" />
-    <ClCompile Include="InputState.cpp" />
-    <ClCompile Include="Legends.Core.cpp" />
-    <ClCompile Include="Rotation.cpp" />
-    <ClCompile Include="Scale.cpp" />
-    <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="SceneDesigner.cpp" />
-    <ClCompile Include="SceneLayer.cpp" />
-    <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="Sprite.cpp" />
-    <ClCompile Include="System.cpp" />
+    <ClCompile Include="input_manager.cpp" />
+    <ClCompile Include="input_state.cpp" />
+    <ClCompile Include="Legends.Core.Main.cpp" />
+    <ClCompile Include="rotation.cpp" />
+    <ClCompile Include="scale.cpp" />
+    <ClCompile Include="scene.cpp" />
+    <ClCompile Include="scene_designer.cpp" />
+    <ClCompile Include="scene_layer.cpp" />
+    <ClCompile Include="scene_manager.cpp" />
+    <ClCompile Include="sprite.cpp" />
+    <ClCompile Include="system.cpp" />
+    <ClCompile Include="textured_cube_shaders.cpp" />
     <ClCompile Include="textured_triangle_mesh_renderer.cpp" />
-    <ClCompile Include="TileMap.cpp" />
-    <ClCompile Include="Transform.cpp" />
+    <ClCompile Include="tile_map.cpp" />
+    <ClCompile Include="transform.cpp" />
     <ClCompile Include="triangle_basic.cpp" />
-    <ClCompile Include="WindowManager.cpp" />
+    <ClCompile Include="window_manager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="hello_world.bmp">
@@ -200,29 +203,33 @@ xcopy /Y /D "$(ProjectDir)vcpkg_installed\x64-windows\bin\SDL2_image.dll" "$(Tar
     <ClInclude Include="base_assets_loader.h" />
     <ClInclude Include="assets_manager.h" />
     <ClInclude Include="bmp_loader.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="GameLoop.h" />
-    <ClInclude Include="GameSystem.h" />
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="cube_textured_mesh_renderer.h" />
+    <ClInclude Include="game_object.h" />
+    <ClInclude Include="game_loop.h" />
+    <ClInclude Include="game_system.h" />
     <ClInclude Include="base_mesh_renderer.h" />
-    <ClInclude Include="ShaderUtils.h" />
+    <ClInclude Include="game_structs.h" />
+    <ClInclude Include="opengl_texture_loader.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="shader_utils.h" />
     <ClInclude Include="glad.h" />
     <ClInclude Include="img_loader.h" />
-    <ClInclude Include="InputManager.h" />
-    <ClInclude Include="InputState.h" />
+    <ClInclude Include="input_manager.h" />
+    <ClInclude Include="input_state.h" />
     <ClInclude Include="khrplatform.h" />
-    <ClInclude Include="Rotation.h" />
-    <ClInclude Include="Scale.h" />
-    <ClInclude Include="Scene.h" />
-    <ClInclude Include="SceneDesigner.h" />
-    <ClInclude Include="SceneLayer.h" />
-    <ClInclude Include="SceneManager.h" />
-    <ClInclude Include="Sprite.h" />
-    <ClInclude Include="System.h" />
+    <ClInclude Include="rotation.h" />
+    <ClInclude Include="scale.h" />
+    <ClInclude Include="scene.h" />
+    <ClInclude Include="scene_designer.h" />
+    <ClInclude Include="scene_layer.h" />
+    <ClInclude Include="scene_manager.h" />
+    <ClInclude Include="sprite.h" />
+    <ClInclude Include="system.h" />
     <ClInclude Include="textured_triangle_mesh_renderer.h" />
-    <ClInclude Include="TileMap.h" />
-    <ClInclude Include="Transform.h" />
-    <ClInclude Include="WindowManager.h" />
+    <ClInclude Include="tile_map.h" />
+    <ClInclude Include="transform.h" />
+    <ClInclude Include="window_manager.h" />
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="map.png">
@@ -269,6 +276,9 @@ xcopy /Y /D "$(ProjectDir)vcpkg_installed\x64-windows\bin\SDL2_image.dll" "$(Tar
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Legends.Core.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

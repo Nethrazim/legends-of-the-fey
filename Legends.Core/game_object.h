@@ -9,6 +9,8 @@
 #include "Sprite.h"
 #include "base_mesh_renderer.h"
 #include "glm/glm.hpp"
+#include "glm/gtc/quaternion.hpp"
+
 
 namespace GameObjects
 {
@@ -26,6 +28,8 @@ namespace GameObjects
 
 		Transform transform;
 		Rotation rotation;
+		glm::quat orientation;
+
 		Scale scale;
 		Sprite sprite;
 		BaseMeshRenderer* meshRenderer;		

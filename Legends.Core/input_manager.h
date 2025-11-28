@@ -1,5 +1,5 @@
 #pragma once
-#include "InputState.h"
+#include "input_state.h"
 
 class InputManager
 {

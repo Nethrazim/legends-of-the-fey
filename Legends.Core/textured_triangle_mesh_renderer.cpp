@@ -1,5 +1,5 @@
 #include "textured_triangle_mesh_renderer.h"
-#include "GameObject.h"
+#include "game_object.h"
 #include <glm/gtc/type_ptr.hpp>
 
 

@@ -1,7 +1,7 @@
-#include "Scene.h"
-#include "GameLoop.h"
+#include "scene.h"
+#include "game_loop.h"
 #include <SDL2/SDL.h>
-#include "WindowManager.h"
+#include "window_manager.h"
 
 extern SDL_GLContext context_;
 

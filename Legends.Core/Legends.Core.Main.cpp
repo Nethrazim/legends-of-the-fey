@@ -5,8 +5,8 @@ and may not be redistributed without written permission.*/
 #define SDL_MAIN_HANDLED
 
 #include <stdio.h>
-#include "GameSystem.h"
-#include "SceneDesigner.h"
+#include "game_system.h"
+#include "scene_designer.h"
 
 using namespace LegendsCore::Assets;
 

@@ -2,7 +2,7 @@
 #include <SDL2/SDL.h>
 #include <string>
 
-#include "GameLoop.h"
+#include "game_loop.h"
 #include "assets_manager.h"
 
 using namespace LegendsCore::Assets;

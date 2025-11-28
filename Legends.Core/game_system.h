@@ -1,7 +1,7 @@
 #pragma once
 #include <SDL2/SDL.h>
-#include "WindowManager.h"
-#include "GameLoop.h"
+#include "window_manager.h"
+#include "game_loop.h"
 #include "assets_manager.h"
 
 using namespace LegendsCore::Assets;

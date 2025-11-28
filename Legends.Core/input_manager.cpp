@@ -1,4 +1,4 @@
-#include "InputManager.h"
+#include "input_manager.h"
 
 InputManager::InputManager() 
 	: isRunning(true), event(), inputState(), mouseX(0), mouseY(0)
