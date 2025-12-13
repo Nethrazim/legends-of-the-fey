@@ -169,7 +169,7 @@ xcopy /Y /D "$(ProjectDir)vcpkg_installed\x64-windows\bin\SDL2_image.dll" "$(Tar
     <ClCompile Include="game_loop.cpp" />
     <ClCompile Include="game_system.cpp" />
     <ClCompile Include="base_mesh_renderer.cpp" />
-    <ClCompile Include="opengl_texture_loader.cpp" />
+    <ClCompile Include="image_byte_array_loader.cpp" />
     <ClCompile Include="shader_utils.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="img_loader.cpp" />
@@ -210,7 +210,7 @@ xcopy /Y /D "$(ProjectDir)vcpkg_installed\x64-windows\bin\SDL2_image.dll" "$(Tar
     <ClInclude Include="game_system.h" />
     <ClInclude Include="base_mesh_renderer.h" />
     <ClInclude Include="game_structs.h" />
-    <ClInclude Include="opengl_texture_loader.h" />
+    <ClInclude Include="image_byte_array_loader.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="shader_utils.h" />
     <ClInclude Include="glad.h" />

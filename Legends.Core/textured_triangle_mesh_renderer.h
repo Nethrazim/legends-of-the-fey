@@ -4,8 +4,8 @@
 class TexturedTriangleMeshRenderer : public BaseMeshRenderer
 {
 	public:
-	TexturedTriangleMeshRenderer(GameObjectPtr gameObject);
-	TexturedTriangleMeshRenderer(GameObjectPtr gameObject, float* newVertices, int size);
+	TexturedTriangleMeshRenderer(GameObject* gameObject);
+	TexturedTriangleMeshRenderer(GameObject* gameObject, float* newVertices, int size);
 	~TexturedTriangleMeshRenderer();
 	
 	void createGLProgram(const char* vsSrc, const char* fsSrc) override;

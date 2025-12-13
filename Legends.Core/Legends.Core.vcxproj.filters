@@ -165,7 +165,7 @@
     <ClCompile Include="textured_triangle_mesh_renderer.cpp">
       <Filter>SceneDesigner\Scene1</Filter>
     </ClCompile>
-    <ClCompile Include="opengl_texture_loader.cpp">
+    <ClCompile Include="image_byte_array_loader.cpp">
       <Filter>AssetsManager</Filter>
     </ClCompile>
     <ClCompile Include="camera.cpp">
@@ -251,7 +251,7 @@
     <ClInclude Include="textured_triangle_mesh_renderer.h">
       <Filter>SceneDesigner\Scene1</Filter>
     </ClInclude>
-    <ClInclude Include="opengl_texture_loader.h">
+    <ClInclude Include="image_byte_array_loader.h">
       <Filter>AssetsManager</Filter>
     </ClInclude>
     <ClInclude Include="camera.h">

@@ -3,12 +3,12 @@
 #include <glm/gtc/type_ptr.hpp>
 
 
-TexturedTriangleMeshRenderer::TexturedTriangleMeshRenderer(GameObjectPtr gameObject)
+TexturedTriangleMeshRenderer::TexturedTriangleMeshRenderer(GameObject* gameObject)
 	: BaseMeshRenderer(gameObject)
 {
 }
 
-TexturedTriangleMeshRenderer::TexturedTriangleMeshRenderer(GameObjectPtr gameObject, float* newVertices, int size)
+TexturedTriangleMeshRenderer::TexturedTriangleMeshRenderer(GameObject* gameObject, float* newVertices, int size)
 	: BaseMeshRenderer(gameObject, newVertices, size)
 {
 }

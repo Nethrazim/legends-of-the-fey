@@ -8,8 +8,8 @@ struct TextureData;
 class CubeTexturedMeshRenderer : public BaseMeshRenderer
 {
 public:
-	CubeTexturedMeshRenderer(GameObjectPtr gameObject);
-	CubeTexturedMeshRenderer(GameObjectPtr gameObject, float* newVertices, int size);
+	CubeTexturedMeshRenderer(GameObject* gameObject);
+	CubeTexturedMeshRenderer(GameObject* gameObject, float* newVertices, int size);
 	~CubeTexturedMeshRenderer();
 
 	void createGLProgram(const char* vsSrc, const char* fsSrc) override;

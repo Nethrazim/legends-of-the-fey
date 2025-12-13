@@ -8,8 +8,10 @@
 #include <iostream>
 
 #include "base_assets_loader.h"
+#include "image_byte_array_loader.h"
 
 class GameLoop;
+struct TextureData;
 
 namespace LegendsCore
 {
@@ -23,8 +25,8 @@ namespace LegendsCore
 		{
 		public:
 			void Load(std::string path, std::string file, SDL_Surface*& imgSurface);
-			SDL_Texture* LoadTexture(std::string, std::string file);
-			
+			SDL_Texture* loadTexture(std::string, std::string file);
+			TextureData* loadByteArray(std::string);
 			~AssetsManager();
 			
 			static AssetsManager* getInstance();
@@ -33,6 +35,7 @@ namespace LegendsCore
 			bool surfaceExists(const std::string key);
 
 			std::map<std::string, SDL_Surface*> loadedSurfaces;
+			std::map<std::string, TextureData*> loadedImageByteArrays;
 		private:
 			BaseAssetsLoader* createFactoryObject(std::string fileName);
 			AssetsManager();
@@ -42,7 +45,7 @@ namespace LegendsCore
 			
 			BMPLoader* bmpLoader;
 			IMGLoader* imgLoader;
-
+			ImageByteArrayLoader imgByteArrayLoader;
 		};
 	};
 };

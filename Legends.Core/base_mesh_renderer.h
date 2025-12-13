@@ -8,15 +8,14 @@ namespace GameObjects {
 
 using namespace GameObjects;
 
-using GameObjectPtr = GameObject*;
 
 
 class BaseMeshRenderer
 { 
 public:
-	GameObjectPtr gameObject = nullptr;
-	BaseMeshRenderer(GameObjectPtr gameObject);
-	BaseMeshRenderer(GameObjectPtr gameObject, float* newVertices, int size);
+	GameObject* gameObject = nullptr;
+	BaseMeshRenderer(GameObject* gameObject);
+	BaseMeshRenderer(GameObject* gameObject, float* newVertices, int size);
 
 	~BaseMeshRenderer();
 

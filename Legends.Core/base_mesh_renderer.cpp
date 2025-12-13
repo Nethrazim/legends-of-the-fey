@@ -11,12 +11,12 @@ namespace GameObjects {
 
 using GameObjectPtr = GameObject*;
 
-BaseMeshRenderer::BaseMeshRenderer(GameObjectPtr gameObject)
+BaseMeshRenderer::BaseMeshRenderer(GameObject* gameObject)
 	: gameObject(gameObject), vertices(nullptr)
 {
 }
 
-BaseMeshRenderer::BaseMeshRenderer(GameObjectPtr gameObject, float *newVertices, int size)
+BaseMeshRenderer::BaseMeshRenderer(GameObject* gameObject, float *newVertices, int size)
 	: gameObject(gameObject), vertices(nullptr)
 {
 	this->setVertices(newVertices, size);	

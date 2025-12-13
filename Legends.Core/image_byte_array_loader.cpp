@@ -1,10 +1,11 @@
-#include "opengl_texture_loader.h"
+#include "image_byte_array_loader.h"
 #include <iostream>
 #include "game_structs.h"
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
 
-TextureData* loadImageBytesArray(std::string file)
+
+TextureData* LegendsCore::Assets::ImageByteArrayLoader::loadImageByteArray(std::string file)
 {
 	TextureData* imgDimensions = new TextureData();
 

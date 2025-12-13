@@ -2,6 +2,7 @@
 #include "bmp_loader.h"
 #include "img_loader.h"
 #include "game_loop.h"
+#include "game_structs.h"
 
 LegendsCore::Assets::AssetsManager::AssetsManager() : bmpLoader(nullptr), imgLoader(nullptr) {}
 
@@ -28,7 +29,13 @@ void LegendsCore::Assets::AssetsManager::Load(std::string path, std::string file
 	assetsLoader->Load(path, fileName, imgSurface);
 }
 
-SDL_Texture* LegendsCore::Assets::AssetsManager::LoadTexture(std::string path, std::string filename)
+TextureData* LegendsCore::Assets::AssetsManager::loadByteArray(std::string file)
+{
+	return imgByteArrayLoader.loadImageByteArray(file);
+}
+
+
+SDL_Texture* LegendsCore::Assets::AssetsManager::loadTexture(std::string path, std::string filename)
 {
 	SDL_Surface* surface = new SDL_Surface();
 	this->Load(path, filename, surface);

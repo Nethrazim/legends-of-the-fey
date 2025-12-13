@@ -1,15 +1,14 @@
 #include "cube_textured_mesh_renderer.h"
 #include "game_structs.h"
-#include "opengl_texture_loader.h"
 #include "game_object.h"
 #include <glm/gtc/type_ptr.hpp>
 
-CubeTexturedMeshRenderer::CubeTexturedMeshRenderer(GameObjectPtr gameObject)
+CubeTexturedMeshRenderer::CubeTexturedMeshRenderer(GameObject* gameObject)
 	: BaseMeshRenderer(gameObject)
 {
 }
 
-CubeTexturedMeshRenderer::CubeTexturedMeshRenderer(GameObjectPtr gameObject, float* newVertices, int size)
+CubeTexturedMeshRenderer::CubeTexturedMeshRenderer(GameObject* gameObject, float* newVertices, int size)
 	: BaseMeshRenderer(gameObject, newVertices, size)
 {
 }
@@ -40,8 +39,8 @@ void CubeTexturedMeshRenderer::setUpProgramAttributes()
 	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(VertexUV), (void*)(3 * sizeof(float)));
 	glEnableVertexAttribArray(1);
 
-	textureData = loadImageBytesArray("tile.jpg");
-
+	textureData = AssetsManager::getInstance()->loadByteArray("tile.jpg");
+	
 	GLenum fmt = textureData->comp == 4  ? GL_RGBA : GL_RGB;
 	
 	glGenTextures(1, &tex);
