@@ -1,32 +1,44 @@
 #include "Transform.h"
 
 
+void GameObjects::Transform::set(glm::vec3 newPosition)
+{
+	this->position = newPosition;
+}
+
+void GameObjects::Transform::set(float x, float y, float z)
+{
+	this->position.x = x;
+	this->position.y = y;
+	this->position.z = z;
+}
+
 void GameObjects::Transform::setX(float x)
 {
-	this->x = x;
+	this->position.x = x;
 }
 
 void GameObjects::Transform::setY(float y)
 {
-	this->y = y;
+	this->position.y = y;
 }
 
 void GameObjects::Transform::setZ(float z)
 {
-	this->z = z;
+	this->position.z = z;
 }
 
 float GameObjects::Transform::getX()
 {
-	return this->x;
+	return this->position.x;
 }
 
 float GameObjects::Transform::getY()
 {
-	return this->y;
+	return this->position.y;
 }
 
 float GameObjects::Transform::getZ()
 {
-	return this->z;
+	return this->position.z;
 }

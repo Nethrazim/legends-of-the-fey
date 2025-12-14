@@ -165,6 +165,7 @@ xcopy /Y /D "$(ProjectDir)vcpkg_installed\x64-windows\bin\SDL2_image.dll" "$(Tar
     <ClCompile Include="bmp_loader.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="cube_textured_mesh_renderer.cpp" />
+    <ClCompile Include="dimension_proxy.cpp" />
     <ClCompile Include="game_object.cpp" />
     <ClCompile Include="game_loop.cpp" />
     <ClCompile Include="game_system.cpp" />
@@ -205,6 +206,7 @@ xcopy /Y /D "$(ProjectDir)vcpkg_installed\x64-windows\bin\SDL2_image.dll" "$(Tar
     <ClInclude Include="bmp_loader.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="cube_textured_mesh_renderer.h" />
+    <ClInclude Include="dimension_proxy.h" />
     <ClInclude Include="game_object.h" />
     <ClInclude Include="game_loop.h" />
     <ClInclude Include="game_system.h" />

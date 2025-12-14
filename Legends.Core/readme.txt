@@ -6,5 +6,7 @@ https://learnopengl.com/Getting-started/Transformations
 
 
 TODO : 
-•	Bad: Calling glGetUniformLocation every frame.
-•	Good: Cache uniform locations after program link and reuse them.
+*	Bad: Calling glGetUniformLocation every frame.
+*	Good: Cache uniform locations after program link and reuse them.
+*	Restructure GameObjects namespace and convert it to vec3
+*	Restructure GameSystem and Window Manager

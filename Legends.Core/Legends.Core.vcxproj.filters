@@ -177,6 +177,9 @@
     <ClCompile Include="textured_cube_shaders.cpp">
       <Filter>ShaderUtils\Cube</Filter>
     </ClCompile>
+    <ClCompile Include="dimension_proxy.cpp">
+      <Filter>GameStructs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="transform.h">
@@ -268,6 +271,9 @@
     </ClInclude>
     <ClInclude Include="system.h">
       <Filter>GameSystem\SystemTick</Filter>
+    </ClInclude>
+    <ClInclude Include="dimension_proxy.h">
+      <Filter>GameStructs</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

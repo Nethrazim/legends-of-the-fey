@@ -6,15 +6,16 @@ namespace GameObjects
 	class Transform
 	{
 	public:
-
-		float x = 0;
-		float y = 0;
-		float z = 0;
+		glm::vec3 position;
+		
+		void set(float x, float y, float z);
+		void set(glm::vec3 newPosition);
 
 		void setX(float x);
 		void setY(float y);
 		void setZ(float z);
-
+		
+		 
 		float getX();
 		float getY();
 		float getZ();

@@ -16,6 +16,7 @@ private:
 
 	public:
 		operator float() const;
+		void operator=(float value);
 	};
 
 public:

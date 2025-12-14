@@ -81,8 +81,8 @@ void Scene::render()
 			else
 			{
 				SDL_Rect rect = {
-				static_cast<int>((*jit)->transform.x),
-				static_cast<int>((*jit)->transform.y),
+				static_cast<int>((*jit)->transform.getX()),
+				static_cast<int>((*jit)->transform.getY()),
 				(*jit)->sprite.width,
 				(*jit)->sprite.height
 				};

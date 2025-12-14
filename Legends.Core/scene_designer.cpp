@@ -25,12 +25,8 @@ void SceneDesigner::prepareScene()
 
 	GameObject* openGLgameObject2 = new GameObject();
 	openGLgameObject2->layer = "enemies";
-	openGLgameObject2->transform.x = 0;
-	openGLgameObject2->transform.y = 0;
-	openGLgameObject2->transform.z = 0;
-	openGLgameObject2->scale.x = 3;
-	openGLgameObject2->scale.y = 3;
-	openGLgameObject2->scale.z = 3;
+	openGLgameObject2->transform.set(0, 0, 0);
+	openGLgameObject2->scale.set(3, 3, 3);
 
 	float vertices2[] = {
 		// positions        // colors
@@ -51,12 +47,9 @@ void SceneDesigner::prepareScene()
 
 	GameObject* shieldTriangle = new GameObject();
 	shieldTriangle->layer = "enemies";
-	shieldTriangle->transform.x = 5;
-	shieldTriangle->transform.y = 5;
-	shieldTriangle->transform.z = 0;
-	shieldTriangle->scale.x = 5;
-	shieldTriangle->scale.y = 5;
-	shieldTriangle->scale.z = 5;
+	shieldTriangle->transform.set(5, 5, 0);
+	shieldTriangle->scale.set(5, 5, 5);
+
 	float vertices3[] = {
 		// positions        // colors
 		// positions        // colors
@@ -76,13 +69,8 @@ void SceneDesigner::prepareScene()
 
 	GameObject* cube = new GameObject();
 	cube->layer = "enemies";
-	cube->transform.x = 5;
-	cube->transform.y = 5;
-	cube->transform.z = 0;
-	cube->scale.x = 8;
-	cube->scale.y = 8;
-	cube->scale.z = 8;
-
+	cube->transform.set(5, 5, 0);
+	cube->scale.set(8, 8, 8);
 
 	cube->meshRenderer = static_cast<BaseMeshRenderer*>(new CubeTexturedMeshRenderer(cube));
 	cube->meshRenderer->createGLProgram(cube_vertex_shader, cube_fragment_shader);

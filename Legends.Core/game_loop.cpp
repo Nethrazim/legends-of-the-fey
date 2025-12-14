@@ -66,7 +66,7 @@ void GameLoop::loop()
 		update();
 		render();
 		SDL_Delay(16);
-		System::setCurrentTimeFrame(SDL_GetTicks64());
+		System::deltaTime = SDL_GetTicks64();
 
 		std::cout << System::deltaTime << std::endl;
 	}
