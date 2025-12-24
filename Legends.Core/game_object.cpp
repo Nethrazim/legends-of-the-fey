@@ -36,19 +36,11 @@ void GameObjects::GameObject::removeChild(GameObject* child)
 void GameObjects::GameObject::update()
 {
 	model = glm::mat4(1.0f);
-	std::cout << scale.x << std::endl;
-	//scale.x += 0.0001f;
-	//scale.y += 0.0001f;
-	//scale.z += 0.0001f;
-	transform.position.x = System::deltaTime * 5.0f;
-	//std::cout << "Transform.x = " << transform.x << std::endl;
-	rotation.rotation.x = System::deltaTime * 0.5f;
-	rotation.rotation.y = System::deltaTime * 1.25;
-	rotation.rotation.z = System::deltaTime * 1.25;
+
 	
-	glm::quat rotX = glm::angleAxis(rotation.rotation.x, glm::vec3(1.0f, 0.0f, 0.0f));
-	glm::quat rotY = glm::angleAxis(rotation.rotation.y, glm::vec3(0.0f, 1.0f, 0.0f));
-	glm::quat rotZ = glm::angleAxis(rotation.rotation.z, glm::vec3(0.0f, 0.0f, 1.0f));
+	glm::quat rotX = glm::angleAxis(static_cast<float>(rotation.x), glm::vec3(1.0f, 0.0f, 0.0f));
+	glm::quat rotY = glm::angleAxis(static_cast<float>(rotation.y), glm::vec3(0.0f, 1.0f, 0.0f));
+	glm::quat rotZ = glm::angleAxis(static_cast<float>(rotation.z), glm::vec3(0.0f, 0.0f, 1.0f));
 
 	orientation = rotX * orientation;
 	orientation = glm::normalize(orientation);
@@ -56,10 +48,9 @@ void GameObjects::GameObject::update()
 	orientation = rotY * orientation;
 	orientation = glm::normalize(orientation);
 
-
 	orientation = rotZ * orientation;
 	orientation = glm::normalize(orientation);
-
+	
 
 
 	if (getChildren()->size() > 0)
@@ -85,16 +76,17 @@ void GameObjects::GameObject::script()
 	//default behavior
 	
 	// 1. Translate
-	model = glm::translate(model, glm::vec3(transform.position.x, transform.position.y, transform.position.z));
+	model = glm::translate(model, glm::vec3(transform.x, transform.y, transform.z));
 
 	// 2. Rotate using the quaternion
 	model = model * glm::mat4_cast(orientation);
-
+	//model = glm::rotate(model, static_cast<float>(rotation.x), glm::vec3(1.0f, 0.0f, 0.0f));
+	//model = glm::rotate(model, static_cast<float>(rotation.y), glm::vec3(0.0f, 1.0f, 0.0f));
+	//model = glm::rotate(model, static_cast<float>(rotation.z), glm::vec3(0.0f, 0.0f, 1.0f));
+	// 
 	// 3. Scale
 	model = glm::scale(model, scale.scale);
-	//model = glm::rotate(model, rotation.x, glm::vec3(1.0f, 0.0f, 0.0f));
-	//model = glm::rotate(model, rotation.y, glm::vec3(0.0f, 1.0f, 0.0f));
-	//model = glm::rotate(model, rotation.z, glm::vec3(0.0f, 0.0f, 1.0f));
+	
 	
 
 	//scale

@@ -6,4 +6,14 @@ private:
 public:
 	DimensionProxy(float& ref);
 	operator float() const;
+
+	DimensionProxy& operator=(float value);
+
+	DimensionProxy& operator+=(float v);
+	
+	DimensionProxy& operator-=(float v);
+	
+	DimensionProxy& operator*=(float v);
+	
+	DimensionProxy& operator/=(float v);
 };

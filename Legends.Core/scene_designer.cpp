@@ -69,35 +69,13 @@ void SceneDesigner::prepareScene()
 
 	GameObject* cube = new GameObject();
 	cube->layer = "enemies";
-	cube->transform.set(5, 5, 0);
+	cube->rotation.set(0, 0, 3);
+	cube->transform.set(10, 5, 0);
 	cube->scale.set(8, 8, 8);
 
 	cube->meshRenderer = static_cast<BaseMeshRenderer*>(new CubeTexturedMeshRenderer(cube));
 	cube->meshRenderer->createGLProgram(cube_vertex_shader, cube_fragment_shader);
 
-	/**
-	GameObject* gameObject2 = new GameObject();
-	gameObject2->layer = "enemies";
-	gameObject2->transform.x = 150;
-	gameObject2->transform.y = 150;
-	gameObject2->sprite.loadTexture("", "hello_world.bmp");
-	gameObject2->sprite.width = 64;
-	gameObject2->sprite.height = 64;
-
-	GameObject* gameObject3 = new GameObject();
-	gameObject3->layer = "enemies";
-	gameObject3->transform.x = 250;
-	gameObject3->transform.y = 250;
-	gameObject3->sprite.loadTexture("", "hello_world.bmp");
-	gameObject3->sprite.width = 64;
-	gameObject3->sprite.height = 64;
-	*/
-	//scene->addObject(map);
-	//scene->addObject(gameObject);
-	//scene->addObject(gameObject2);
-	//scene->addObject(openGLgameObject);
-	//scene->addObject(openGLgameObject2);
-	
 	//scene->addObject(shieldTriangle);
 	//scene->addObject(openGLgameObject2);
 	scene->addObject(cube);

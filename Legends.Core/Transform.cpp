@@ -1,5 +1,8 @@
 #include "Transform.h"
 
+GameObjects::Transform::Transform() : x(position.x), y(position.y), z(position.z)
+{
+}
 
 void GameObjects::Transform::set(glm::vec3 newPosition)
 {
