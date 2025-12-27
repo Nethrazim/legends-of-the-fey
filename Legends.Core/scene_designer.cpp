@@ -3,6 +3,7 @@
 #include "textured_triangle_mesh_renderer.h"
 #include "base_mesh_renderer.h"
 #include "cube_textured_mesh_renderer.h"
+#include "color_cube_mesh_renderer.h"
 
 extern const char* vertex_triangle_basic_src;
 extern const char* fragment_triangle_basic_src;
@@ -10,7 +11,8 @@ extern const char* vertex_triangle_barycentric_src;
 extern const char* fragment_triangle_barycentric_src;
 extern const char* cube_vertex_shader;
 extern const char* cube_fragment_shader;
-
+extern const char* colors_vs;
+extern const char* colors_fs;
 
 void SceneDesigner::prepareScene()
 {
@@ -22,7 +24,7 @@ void SceneDesigner::prepareScene()
 	scene->tileMap = new TileMap();
 	scene->tileMap->sprite.loadTexture("", "tile_w2.jpg");
 	*/
-
+	/*
 	GameObject* openGLgameObject2 = new GameObject();
 	openGLgameObject2->layer = "enemies";
 	openGLgameObject2->transform.set(0, 0, 0);
@@ -42,9 +44,9 @@ void SceneDesigner::prepareScene()
 	openGLgameObject2->meshRenderer = static_cast<BaseMeshRenderer*>(new TexturedTriangleMeshRenderer(openGLgameObject2));
 	openGLgameObject2->meshRenderer->setVertices(vertices2, sizeof(vertices2) / sizeof(float));
 	openGLgameObject2->meshRenderer->createGLProgram(vertex_triangle_barycentric_src, fragment_triangle_barycentric_src);
-
+	*/
 	//openGLgameObject->addChild(openGLgameObject2);
-
+	/*
 	GameObject* shieldTriangle = new GameObject();
 	shieldTriangle->layer = "enemies";
 	shieldTriangle->transform.set(5, 5, 0);
@@ -65,9 +67,9 @@ void SceneDesigner::prepareScene()
 
 	shieldTriangle->meshRenderer->setVertices(vertices3, sizeof(vertices3) / sizeof(float));
 	shieldTriangle->meshRenderer->createGLProgram(vertex_triangle_barycentric_src, fragment_triangle_barycentric_src);
+	*/
 
-
-	GameObject* cube = new GameObject();
+	/*GameObject* cube = new GameObject();
 	cube->layer = "enemies";
 	cube->rotation.set(0, 0, 3);
 	cube->transform.set(10, 5, 0);
@@ -75,9 +77,19 @@ void SceneDesigner::prepareScene()
 
 	cube->meshRenderer = static_cast<BaseMeshRenderer*>(new CubeTexturedMeshRenderer(cube));
 	cube->meshRenderer->createGLProgram(cube_vertex_shader, cube_fragment_shader);
+	*/
 
+	GameObject* colorCube = new GameObject();
+	colorCube->layer = "enemies";
+	colorCube->transform.set(10, 5, 0);
+	colorCube->scale.set(10, 10, 1);
+
+	colorCube->meshRenderer = static_cast<BaseMeshRenderer*>(new ColorCubeMeshRenderer(colorCube));
+	colorCube->meshRenderer->createGLProgram(colors_vs, colors_fs);
 	//scene->addObject(shieldTriangle);
 	//scene->addObject(openGLgameObject2);
-	scene->addObject(cube);
+	//scene->addObject(cube);
+
+	scene->addObject(colorCube);
 	SceneManager::addScene(scene);
 }

@@ -82,6 +82,9 @@
     <Filter Include="Assets">
       <UniqueIdentifier>{622aed61-31e7-4614-af97-1a2833c70cba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ShaderUtils\Lighting">
+      <UniqueIdentifier>{cbda8a2d-f8d6-4ab6-8be1-847e53cbf122}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Legends.Core.Main.cpp">
@@ -180,6 +183,9 @@
     <ClCompile Include="dimension_proxy.cpp">
       <Filter>GameStructs</Filter>
     </ClCompile>
+    <ClCompile Include="color_cube_mesh_renderer.cpp">
+      <Filter>SceneDesigner\Scene1</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="transform.h">
@@ -275,6 +281,9 @@
     <ClInclude Include="dimension_proxy.h">
       <Filter>GameStructs</Filter>
     </ClInclude>
+    <ClInclude Include="color_cube_mesh_renderer.h">
+      <Filter>SceneDesigner\Scene1</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="hello_world.bmp">
@@ -295,6 +304,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="vcpkg.json" />
+    <None Include="packages.config" />
+    <None Include="colors.cpp">
+      <Filter>ShaderUtils\Lighting</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />

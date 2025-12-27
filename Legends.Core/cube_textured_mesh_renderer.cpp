@@ -65,10 +65,25 @@ void CubeTexturedMeshRenderer::render(int width, int height, SDL_Window* window,
 	if (!programCreated) return;
 
 	glUseProgram(program);
-	GLint uMVP = glGetUniformLocation(program, "uMVP"); // get uniform location
+	
+	static GLint uMVP = -1;
+	
+	if (uMVP == -1)
+	{
+		uMVP = glGetUniformLocation(program, "uMVP"); // get uniform location
+	}
+
+
 	glUniformMatrix4fv(uMVP, 1, GL_FALSE, glm::value_ptr(gameObject->mvpMatrix));
 
-	glUniform1i(glGetUniformLocation(program, "uTex"), 0);
+	static GLint uTex = -1;
+	
+	if (uTex == -1)
+	{
+		uTex = glGetUniformLocation(program, "uTex");
+	}
+
+	glUniform1i(uTex, 0);
 
 	glActiveTexture(GL_TEXTURE0);
 	glBindTexture(GL_TEXTURE_2D, tex);
