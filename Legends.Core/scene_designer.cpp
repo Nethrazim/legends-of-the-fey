@@ -68,28 +68,43 @@ void SceneDesigner::prepareScene()
 	shieldTriangle->meshRenderer->setVertices(vertices3, sizeof(vertices3) / sizeof(float));
 	shieldTriangle->meshRenderer->createGLProgram(vertex_triangle_barycentric_src, fragment_triangle_barycentric_src);
 	*/
+	int x_anchor = -40;
+	int z_anchor = -5;
+	int y_anchor = 5;
 
-	/*GameObject* cube = new GameObject();
-	cube->layer = "enemies";
-	cube->rotation.set(0, 0, 3);
-	cube->transform.set(10, 5, 0);
-	cube->scale.set(8, 8, 8);
+	//for(int i = 0; i < 10; ++i)
+	//{
+		//aux = i < 10 ? aux : -aux;
+		//for (int j = 0; j < 10; ++j)
+		//{
+			GameObject* cube = new GameObject();
+			cube->layer = "enemies";
+			cube->rotation.set(0, 0, 3);
+			cube->transform.set((x_anchor += 5), y_anchor, (z_anchor+=2));
+			cube->scale.set(2, 2, 2);
 
-	cube->meshRenderer = static_cast<BaseMeshRenderer*>(new CubeTexturedMeshRenderer(cube));
-	cube->meshRenderer->createGLProgram(cube_vertex_shader, cube_fragment_shader);
-	*/
+			cube->meshRenderer = static_cast<BaseMeshRenderer*>(new CubeTexturedMeshRenderer(cube));
+			cube->meshRenderer->createGLProgram(cube_vertex_shader, cube_fragment_shader);
 
-	GameObject* colorCube = new GameObject();
-	colorCube->layer = "enemies";
-	colorCube->transform.set(10, 5, 0);
-	colorCube->scale.set(10, 10, 1);
+			/*
+			GameObject* colorCube = new GameObject();
+			colorCube->layer = "enemies";
+			colorCube->transform.set(10 + aux + i * 5, 5, 0);
+			colorCube->scale.set(10, 10, 1);
 
-	colorCube->meshRenderer = static_cast<BaseMeshRenderer*>(new ColorCubeMeshRenderer(colorCube));
-	colorCube->meshRenderer->createGLProgram(colors_vs, colors_fs);
-	//scene->addObject(shieldTriangle);
-	//scene->addObject(openGLgameObject2);
-	//scene->addObject(cube);
+			colorCube->meshRenderer = static_cast<BaseMeshRenderer*>(new ColorCubeMeshRenderer(colorCube));
+			colorCube->meshRenderer->createGLProgram(colors_vs, colors_fs);
+			//scene->addObject(shieldTriangle);
+			//scene->addObject(openGLgameObject2);
+			//scene->addObject(cube);
 
-	scene->addObject(colorCube);
+			scene->addObject(colorCube);
+			*/
+			scene->addObject(cube);
+		//}
+		//z_anchor = -5;
+		//x_anchor = -30;
+		//y_anchor = 5;
+	//
 	SceneManager::addScene(scene);
 }

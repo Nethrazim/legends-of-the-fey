@@ -85,6 +85,9 @@
     <Filter Include="ShaderUtils\Lighting">
       <UniqueIdentifier>{cbda8a2d-f8d6-4ab6-8be1-847e53cbf122}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Components\Shader">
+      <UniqueIdentifier>{c44379b4-c190-4518-821a-cb392e32bde5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Legends.Core.Main.cpp">
@@ -156,9 +159,6 @@
     <ClCompile Include="base_mesh_renderer.cpp">
       <Filter>GameObject\Components\MeshRenderer</Filter>
     </ClCompile>
-    <ClCompile Include="shader_utils.cpp">
-      <Filter>ShaderUtils</Filter>
-    </ClCompile>
     <ClCompile Include="barycentric.cpp">
       <Filter>ShaderUtils\Triangle\barycentric</Filter>
     </ClCompile>
@@ -185,6 +185,12 @@
     </ClCompile>
     <ClCompile Include="color_cube_mesh_renderer.cpp">
       <Filter>SceneDesigner\Scene1</Filter>
+    </ClCompile>
+    <ClCompile Include="colors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shader.cpp">
+      <Filter>GameObject\Components\Shader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -251,9 +257,6 @@
     <ClInclude Include="base_mesh_renderer.h">
       <Filter>GameObject\Components\MeshRenderer</Filter>
     </ClInclude>
-    <ClInclude Include="shader_utils.h">
-      <Filter>ShaderUtils</Filter>
-    </ClInclude>
     <ClInclude Include="scene_designer.h">
       <Filter>SceneDesigner</Filter>
     </ClInclude>
@@ -283,6 +286,9 @@
     </ClInclude>
     <ClInclude Include="color_cube_mesh_renderer.h">
       <Filter>SceneDesigner\Scene1</Filter>
+    </ClInclude>
+    <ClInclude Include="shader.h">
+      <Filter>GameObject\Components\Shader</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

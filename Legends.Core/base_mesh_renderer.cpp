@@ -1,13 +1,14 @@
 #include <iostream>
 #include "base_mesh_renderer.h"
-#include "shader_utils.h"
 #include "game_object.h"
 #include <glm/gtc/type_ptr.hpp>
 #include "Camera.h"
+#include "shader.h"
 
-namespace GameObjects {
-	class GameObject;
-}
+using namespace GameObjects;
+
+using namespace ShaderSystem;
+
 
 using GameObjectPtr = GameObject*;
 
@@ -50,31 +51,10 @@ void BaseMeshRenderer::setVertices(float* newVertices, int size)
 
 void BaseMeshRenderer::createGLProgram(const char* vsSrc, const char* fsSrc)
 {
-	vs = glCreateShader(GL_VERTEX_SHADER);
-	if (!CompileShader(vs, vsSrc))
-	{
-		std::cerr << "Failed to compile vertex shader." << std::endl;
-		return;
-	}
-
-	fs = glCreateShader(GL_FRAGMENT_SHADER);
-	if (!CompileShader(fs, fsSrc))
-	{
-		std::cerr << "Failed to compile fragment shader." << std::endl;
-		return;
-	}
-
-	program = glCreateProgram();
-	
-	if (!CreateProgram(program, vs, fs))
-	{
-		std::cerr << "Failed to create shader program." << std::endl;
-		return;
-	}
-
-	setUpProgramAttributes();
-	
+	Shader* shader = Shader::createGLProgram("test", vsSrc, fsSrc);
+	program = shader->getProgramId();
 	programCreated = true;
+	setUpProgramAttributes();
 }
 
 void BaseMeshRenderer::setUpProgramAttributes()

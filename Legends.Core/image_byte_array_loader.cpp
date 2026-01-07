@@ -7,7 +7,10 @@
 
 TextureData* LegendsCore::Assets::ImageByteArrayLoader::loadImageByteArray(std::string file)
 {
-	TextureData* imgDimensions = new TextureData();
+	if (imgDimensions)
+		return imgDimensions;
+
+	imgDimensions = new TextureData();
 
 	imgDimensions->data = stbi_load(file.c_str(), &imgDimensions->w, &imgDimensions->h, &imgDimensions->comp, 0);
 	if (!imgDimensions->data)

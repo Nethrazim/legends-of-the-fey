@@ -10,6 +10,7 @@ namespace LegendsCore
 		class ImageByteArrayLoader
 		{
 		public:
+			TextureData* imgDimensions;
 			TextureData* loadImageByteArray(std::string file);
 		};
 	}
