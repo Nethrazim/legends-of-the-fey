@@ -15,6 +15,7 @@ using GameObjectPtr = GameObject*;
 BaseMeshRenderer::BaseMeshRenderer(GameObject* gameObject)
 	: gameObject(gameObject), vertices(nullptr)
 {
+	active = true;
 }
 
 BaseMeshRenderer::BaseMeshRenderer(GameObject* gameObject, float *newVertices, int size)

@@ -171,6 +171,7 @@ xcopy /Y /D "$(ProjectDir)vcpkg_installed\x64-windows\bin\SDL2_image.dll" "$(Tar
     <ClCompile Include="dimension_proxy.cpp" />
     <ClCompile Include="game_object.cpp" />
     <ClCompile Include="game_loop.cpp" />
+    <ClCompile Include="game_object_renderer.cpp" />
     <ClCompile Include="game_system.cpp" />
     <ClCompile Include="base_mesh_renderer.cpp" />
     <ClCompile Include="image_byte_array_loader.cpp" />
@@ -213,6 +214,7 @@ xcopy /Y /D "$(ProjectDir)vcpkg_installed\x64-windows\bin\SDL2_image.dll" "$(Tar
     <ClInclude Include="dimension_proxy.h" />
     <ClInclude Include="game_object.h" />
     <ClInclude Include="game_loop.h" />
+    <ClInclude Include="game_object_renderer.h" />
     <ClInclude Include="game_system.h" />
     <ClInclude Include="base_mesh_renderer.h" />
     <ClInclude Include="game_structs.h" />

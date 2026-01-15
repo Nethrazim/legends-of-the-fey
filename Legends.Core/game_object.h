@@ -10,7 +10,8 @@
 #include "base_mesh_renderer.h"
 #include "glm/glm.hpp"
 #include "glm/gtc/quaternion.hpp"
-
+#include "game_system.h"
+#include "game_object_renderer.h"
 
 namespace GameObjects
 {
@@ -29,8 +30,9 @@ namespace GameObjects
 		Transform transform;
 		Rotation rotation;
 		glm::quat orientation;
-
 		Scale scale;
+
+		GameObjectRenderer renderer;
 		Sprite sprite;
 		BaseMeshRenderer* meshRenderer;		
 
@@ -49,4 +51,7 @@ namespace GameObjects
 		glm::mat4 mvpMatrix;
 		void calculateMVP(const glm::mat4& view, const glm::mat4& projection);
 	};
+
+
+	
 }

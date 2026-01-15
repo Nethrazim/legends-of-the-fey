@@ -1,14 +1,17 @@
 
 #include "game_system.h"
 
-GameSystem::GameSystem() : width(0), height(0) {
+int GameSystem::width = 0;
+int GameSystem::height = 0;
+
+GameSystem::GameSystem()  {
 	assetsManager = AssetsManager::getInstance();
 }
 
 void GameSystem::init()
 {
 
-	windowManager.setWindowDimensions(width, height);
+	windowManager.setWindowDimensions(GameSystem::width, GameSystem::height);
 	windowManager.setWindowMode();
 	windowManager.initSDL();
 	windowManager.setOpenGL(4, 1, true, true);

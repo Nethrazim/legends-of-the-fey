@@ -13,7 +13,8 @@ class GameSystem
 public:
 	GameSystem();
 
-	int width, height;
+	static int width;
+	static int height;
 
 	WindowManager windowManager;
 	GameLoop gameRenderer;

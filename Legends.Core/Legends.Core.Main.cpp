@@ -19,8 +19,8 @@ SDL_GLContext context_;
 
 int main(int argc, char* argv[])
 {
-	gameSystem.width = SCREEN_WIDTH;
-	gameSystem.height = SCREEN_HEIGHT;
+	GameSystem::width = SCREEN_WIDTH;
+	GameSystem::height = SCREEN_HEIGHT;
 
 	gameSystem.init();
 	SceneDesigner::prepareScene();

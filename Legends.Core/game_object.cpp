@@ -7,12 +7,11 @@
 #include "Camera.h"
 #include <iostream>
 
-
 GameObjects::GameObject::GameObject()
 	: transform(), rotation(), scale(), sprite(), meshRenderer(nullptr), parent(nullptr)
 {
 	meshRenderer = new BaseMeshRenderer(this);
-	meshRenderer->active = true;
+	renderer.setGameObjectInstance(this);
 }
 
 

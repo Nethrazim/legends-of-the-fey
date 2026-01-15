@@ -192,6 +192,9 @@
     <ClCompile Include="shader.cpp">
       <Filter>GameObject\Components\Shader</Filter>
     </ClCompile>
+    <ClCompile Include="game_object_renderer.cpp">
+      <Filter>GameObject\GameObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="transform.h">
@@ -289,6 +292,9 @@
     </ClInclude>
     <ClInclude Include="shader.h">
       <Filter>GameObject\Components\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="game_object_renderer.h">
+      <Filter>GameObject\GameObject</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

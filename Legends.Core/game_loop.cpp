@@ -91,8 +91,6 @@ void GameLoop::update() {
 }
 
 void GameLoop::render() {
-	//SDL_SetRenderDrawColor(renderer, 34, 139, 34, 255);
-	//SDL_RenderClear(renderer);
 	glViewport(0, 0, 800, 600);
 	glClearColor(0.192f, 0.302f, 0.475f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -100,39 +98,6 @@ void GameLoop::render() {
 	SceneManager::currentScene()->render();
 
 	SDL_GL_SwapWindow(window);
-	//
-	//SDL_SetRenderTarget(GameLoop::renderer, nullptr);
-	/*
-	if (shouldRenderRight()) {
-		if (sourceRect.x + offsetX < 3000)
-		{
-			sourceRect.x += offsetX;
-		}
-	};
-	
-	if (shouldRenderLeft()) {
-		if (sourceRect.x - offsetX > 0)
-		{
-			sourceRect.x -= offsetX;
-		}
-	};
-
-	if (shouldRenderBottom()) {
-		if ((sourceRect.y + offsetY) < 2000)
-		{
-			sourceRect.y += offsetY;
-		}
-	}
-
-	if (shouldRenderTop()) {
-		if ((sourceRect.y - offsetY) > 0)
-		{
-			sourceRect.y -= offsetY;
-		}
-	}
-	*/
-	//SDL_RenderCopy(GameLoop::renderer, SceneManager::currentScene()->sceneTexture, &sourceRect, nullptr);
-	//SDL_RenderPresent(renderer);
 }
 
 bool GameLoop::shouldRenderTop() {
