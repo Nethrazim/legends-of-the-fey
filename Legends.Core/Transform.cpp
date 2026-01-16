@@ -2,6 +2,14 @@
 
 GameObjects::Transform::Transform() : x(position.x), y(position.y), z(position.z)
 {
+
+}
+
+GameObjects::Transform::Transform(int x, int y, int z) : x(position.x), y(position.y), z(position.z)
+{
+	position.x = x;
+	position.y = y;
+	position.z = z;
 }
 
 void GameObjects::Transform::set(glm::vec3 newPosition)

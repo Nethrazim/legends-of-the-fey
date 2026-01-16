@@ -9,6 +9,7 @@ namespace GameObjects
 	{
 	public:
 		Scale();
+		Scale(float x, float y, float z);
 		glm::vec3 scale;
 		DimensionProxy x;
 		DimensionProxy y;

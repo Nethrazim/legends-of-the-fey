@@ -8,6 +8,7 @@ namespace GameObjects
 	{
 	public:
 		Transform();
+		Transform(int x, int y, int z);
 
 		glm::vec3 position;
 		

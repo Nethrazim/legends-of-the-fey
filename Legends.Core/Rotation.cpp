@@ -2,8 +2,13 @@
 
 namespace GameObjects
 {
-	Rotation::Rotation() : x(rotation.x), y(rotation.y), z(rotation.z) {
-		// Constructor body (if needed)
+	Rotation::Rotation() : Rotation(1.0f, 1.0f, 1.0f) {
+	}
+
+	Rotation::Rotation(int x, int y, int z) : x(rotation.x), y(rotation.y), z(rotation.z) {
+		rotation.x = x;
+		rotation.y = y;
+		rotation.z = z;
 	}
 
 	void Rotation::set(float rotationX, float rotationY, float rotationZ)

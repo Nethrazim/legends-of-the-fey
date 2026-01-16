@@ -10,6 +10,7 @@ namespace GameObjects
 		glm::vec3 rotation;
 
 		Rotation();
+		Rotation(int x, int y, int z);
 
 		DimensionProxy x;
 		DimensionProxy y;
