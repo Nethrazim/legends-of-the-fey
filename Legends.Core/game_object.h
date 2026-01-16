@@ -19,7 +19,8 @@ namespace GameObjects
 	{
 	private:
 		std::vector<GameObject*> children;
-	
+		GameObjectRenderer renderer;
+
 	public:
 		std::string layer = "default";
 
@@ -32,7 +33,8 @@ namespace GameObjects
 		glm::quat orientation;
 		Scale scale;
 
-		GameObjectRenderer renderer;
+		void render();
+		
 		Sprite sprite;
 		BaseMeshRenderer* meshRenderer;		
 

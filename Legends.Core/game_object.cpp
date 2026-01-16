@@ -108,6 +108,14 @@ void GameObjects::GameObject::calculateMVP(const glm::mat4& view, const glm::mat
 	mvpMatrix =  projection * view * model;
 }
 
+void GameObjects::GameObject::render()
+{
+	if (meshRenderer->active)
+	{
+		renderer.render();
+	}
+}
+
 GameObjects::GameObject::~GameObject()
 {
 	if(meshRenderer)

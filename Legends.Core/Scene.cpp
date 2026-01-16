@@ -46,7 +46,7 @@ void Scene::render()
 		{
 			if ((*jit)->meshRenderer->active)
 			{
-				(*jit)->meshRenderer->render(800, 600, WindowManager::getWindow(), context_);
+				(*jit)->render();
 			}
 		}
 	}

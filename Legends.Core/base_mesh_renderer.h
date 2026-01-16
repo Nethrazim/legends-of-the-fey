@@ -3,6 +3,7 @@
 #include <SDL2/SDL.h>
 
 namespace GameObjects {
+	class GameObjectRenderer;
 	class GameObject;
 }
 
@@ -26,9 +27,8 @@ public:
 	virtual void createGLProgram(const char* vsSrc, const char* fsSrc);
 	virtual void setUpProgramAttributes();
 
-	virtual void render(int width, int height, SDL_Window* window, SDL_GLContext context);
 	bool programCreated = false;
-	
+
 	GLuint vs = 0;
 	GLuint fs = 0;
 	GLuint program = 0;
@@ -39,5 +39,10 @@ public:
 	int vertexSize = 0;
 	unsigned int indices[6] = { 0, 1, 2, 2, 3, 0 };
 	bool cTimeApplied = false;
+
+private:
+	virtual void render(int width, int height, SDL_Window* window, SDL_GLContext context);
+
+	friend class GameObjectRenderer;
 };
 
