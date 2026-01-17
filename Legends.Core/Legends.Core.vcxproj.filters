@@ -186,9 +186,6 @@
     <ClCompile Include="color_cube_mesh_renderer.cpp">
       <Filter>SceneDesigner\Scene1</Filter>
     </ClCompile>
-    <ClCompile Include="colors.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="shader.cpp">
       <Filter>GameObject\Components\Shader</Filter>
     </ClCompile>

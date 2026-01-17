@@ -46,10 +46,10 @@ void SceneDesigner::prepareScene()
 	openGLgameObject2->meshRenderer->createGLProgram(vertex_triangle_barycentric_src, fragment_triangle_barycentric_src);
 	*/
 	//openGLgameObject->addChild(openGLgameObject2);
-	/*
+	
 	GameObject* shieldTriangle = new GameObject();
 	shieldTriangle->layer = "enemies";
-	shieldTriangle->transform.set(5, 5, 0);
+	shieldTriangle->transform.set(35, 5, 0);
 	shieldTriangle->scale.set(5, 5, 5);
 
 	float vertices3[] = {
@@ -67,11 +67,11 @@ void SceneDesigner::prepareScene()
 
 	shieldTriangle->meshRenderer->setVertices(vertices3, sizeof(vertices3) / sizeof(float));
 	shieldTriangle->meshRenderer->createGLProgram(vertex_triangle_barycentric_src, fragment_triangle_barycentric_src);
-	*/
+	
 	int x_anchor = -40;
 	int z_anchor = -5;
 	int y_anchor = 5;
-
+	
 	//for(int i = 0; i < 10; ++i)
 	//{
 		//aux = i < 10 ? aux : -aux;
@@ -101,6 +101,8 @@ void SceneDesigner::prepareScene()
 
 			scene->addObject(colorCube);
 			scene->addObject(cube);
+			scene->addObject(shieldTriangle);
+
 		//}
 		//z_anchor = -5;
 		//x_anchor = -30;

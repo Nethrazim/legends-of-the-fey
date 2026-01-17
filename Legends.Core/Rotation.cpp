@@ -2,7 +2,7 @@
 
 namespace GameObjects
 {
-	Rotation::Rotation() : Rotation(1.0f, 1.0f, 1.0f) {
+	Rotation::Rotation() : Rotation(0.0f, 0.0f, 0.0f) {
 	}
 
 	Rotation::Rotation(int x, int y, int z) : x(rotation.x), y(rotation.y), z(rotation.z) {
