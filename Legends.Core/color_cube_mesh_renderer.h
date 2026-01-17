@@ -18,46 +18,52 @@ public:
     void render(int width, int height, SDL_Window* window, SDL_GLContext context) override;
 
     const VertexUV cubeVertices[36] = {
-        { 0.5f, -0.5f, -0.5f,  0.0f, 0.0f }, // bottom-left
-        { -0.5f, -0.5f, -0.5f,  1.0f, 0.0f }, // bottom-right
-        { -0.5f,  0.5f, -0.5f,  1.0f, 1.0f }, // top-right
-        { -0.5f,  0.5f, -0.5f,  1.0f, 1.0f }, // top-right
-        { 0.5f,  0.5f, -0.5f,  0.0f, 1.0f }, // top-left
-        { 0.5f, -0.5f, -0.5f,  0.0f, 0.0f }, // bottom-left
-        // front face (CCW winding)
-        { -0.5f, -0.5f,  0.5f,  0.0f, 0.0f }, // bottom-left
-        { 0.5f, -0.5f,  0.5f,  1.0f, 0.0f }, // bottom-right
-        { 0.5f,  0.5f,  0.5f,  1.0f, 1.0f }, // top-right
-        { 0.5f,  0.5f,  0.5f,  1.0f, 1.0f }, // top-right
-        { -0.5f,  0.5f,  0.5f,  0.0f, 1.0f }, // top-left
-        { -0.5f, -0.5f,  0.5f,  0.0f, 0.0f }, // bottom-left
-        // left face (CCW)
-        { -0.5f, -0.5f, -0.5f,  0.0f, 0.0f }, // bottom-left
-        { -0.5f, -0.5f,  0.5f,  1.0f, 0.0f }, // bottom-right
-        { -0.5f,  0.5f,  0.5f,  1.0f, 1.0f }, // top-right
-        { -0.5f,  0.5f,  0.5f,  1.0f, 1.0f }, // top-right
-        { -0.5f,  0.5f, -0.5f,  0.0f, 1.0f }, // top-left
-        { -0.5f, -0.5f, -0.5f,  0.0f, 0.0f }, // bottom-left
-        // right face (CCW)
-        { 0.5f, -0.5f,  0.5f,  0.0f, 0.0f }, // bottom-left
-        { 0.5f, -0.5f, -0.5f,  1.0f, 0.0f }, // bottom-right
-        { 0.5f,  0.5f, -0.5f,  1.0f, 1.0f }, // top-right
-        { 0.5f,  0.5f, -0.5f,  1.0f, 1.0f }, // top-right
-        { 0.5f,  0.5f,  0.5f,  0.0f, 1.0f }, // top-left
-        { 0.5f, -0.5f,  0.5f,  0.0f, 0.0f }, // bottom-left
-        // bottom face (CCW)      
-        { -0.5f, -0.5f, -0.5f,  0.0f, 0.0f }, // bottom-left
-        { 0.5f, -0.5f, -0.5f,  1.0f, 0.0f }, // bottom-right
-        { 0.5f, -0.5f,  0.5f,  1.0f, 1.0f }, // top-right
-        { 0.5f, -0.5f,  0.5f,  1.0f, 1.0f }, // top-right
-        { -0.5f, -0.5f,  0.5f,  0.0f, 1.0f }, // top-left
-        { -0.5f, -0.5f, -0.5f,  0.0f, 0.0f }, // bottom-left
-        // top face (CCW)
-        { -0.5f,  0.5f,  0.5f,  0.0f, 0.0f }, // bottom-left
-        { 0.5f,  0.5f,  0.5f,  1.0f, 0.0f }, // bottom-right
-        { 0.5f,  0.5f, -0.5f,  1.0f, 1.0f }, // top-right
-        { 0.5f,  0.5f, -0.5f,  1.0f, 1.0f }, // top-right
-        { -0.5f,  0.5f, -0.5f,  0.0f, 1.0f }, // top-left
-        { -0.5f,  0.5f,  0.5f,  0.0f, 0.0f } // bottom-left
+       // Back face
+       { 0.5f, -0.5f, -0.5f,  0.0f, 0.0f,  0.0f,  0.0f, -1.0f }, // bottom-left
+       { -0.5f, -0.5f, -0.5f,  1.0f, 0.0f,  0.0f,  0.0f, -1.0f }, // bottom-right
+       { -0.5f,  0.5f, -0.5f,  1.0f, 1.0f,  0.0f,  0.0f, -1.0f }, // top-right
+       { -0.5f,  0.5f, -0.5f,  1.0f, 1.0f,  0.0f,  0.0f, -1.0f }, // top-right
+       { 0.5f,  0.5f, -0.5f,  0.0f, 1.0f,  0.0f,  0.0f, -1.0f }, // top-left
+       { 0.5f, -0.5f, -0.5f,  0.0f, 0.0f,  0.0f,  0.0f, -1.0f }, // bottom-left
+
+       // Front face
+       { -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,  0.0f,  0.0f,  1.0f }, // bottom-left
+       { 0.5f, -0.5f,  0.5f,  1.0f, 0.0f,  0.0f,  0.0f,  1.0f }, // bottom-right
+       { 0.5f,  0.5f,  0.5f,  1.0f, 1.0f,  0.0f,  0.0f,  1.0f }, // top-right
+       { 0.5f,  0.5f,  0.5f,  1.0f, 1.0f,  0.0f,  0.0f,  1.0f }, // top-right
+       { -0.5f,  0.5f,  0.5f,  0.0f, 1.0f,  0.0f,  0.0f,  1.0f }, // top-left
+       { -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,  0.0f,  0.0f,  1.0f }, // bottom-left
+
+       // Left face
+       { -0.5f, -0.5f, -0.5f,  0.0f, 0.0f, -1.0f,  0.0f,  0.0f }, // bottom-left
+       { -0.5f, -0.5f,  0.5f,  1.0f, 0.0f, -1.0f,  0.0f,  0.0f }, // bottom-right
+       { -0.5f,  0.5f,  0.5f,  1.0f, 1.0f, -1.0f,  0.0f,  0.0f }, // top-right
+       { -0.5f,  0.5f,  0.5f,  1.0f, 1.0f, -1.0f,  0.0f,  0.0f }, // top-right
+       { -0.5f,  0.5f, -0.5f,  0.0f, 1.0f, -1.0f,  0.0f,  0.0f }, // top-left
+       { -0.5f, -0.5f, -0.5f,  0.0f, 0.0f, -1.0f,  0.0f,  0.0f }, // bottom-left
+
+       // Right face
+       { 0.5f, -0.5f,  0.5f,  0.0f, 0.0f,  1.0f,  0.0f,  0.0f }, // bottom-left
+       { 0.5f, -0.5f, -0.5f,  1.0f, 0.0f,  1.0f,  0.0f,  0.0f }, // bottom-right
+       { 0.5f,  0.5f, -0.5f,  1.0f, 1.0f,  1.0f,  0.0f,  0.0f }, // top-right
+       { 0.5f,  0.5f, -0.5f,  1.0f, 1.0f,  1.0f,  0.0f,  0.0f }, // top-right
+       { 0.5f,  0.5f,  0.5f,  0.0f, 1.0f,  1.0f,  0.0f,  0.0f }, // top-left
+       { 0.5f, -0.5f,  0.5f,  0.0f, 0.0f,  1.0f,  0.0f,  0.0f }, // bottom-left
+
+       // Bottom face
+       { -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,  0.0f, -1.0f,  0.0f }, // bottom-left
+       { 0.5f, -0.5f, -0.5f,  1.0f, 0.0f,  0.0f, -1.0f,  0.0f }, // bottom-right
+       { 0.5f, -0.5f,  0.5f,  1.0f, 1.0f,  0.0f, -1.0f,  0.0f }, // top-right
+       { 0.5f, -0.5f,  0.5f,  1.0f, 1.0f,  0.0f, -1.0f,  0.0f }, // top-right
+       { -0.5f, -0.5f,  0.5f,  0.0f, 1.0f,  0.0f, -1.0f,  0.0f }, // top-left
+       { -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,  0.0f, -1.0f,  0.0f }, // bottom-left
+
+       // Top face
+       { -0.5f,  0.5f,  0.5f,  0.0f, 0.0f,  0.0f,  1.0f,  0.0f }, // bottom-left
+       { 0.5f,  0.5f,  0.5f,  1.0f, 0.0f,  0.0f,  1.0f,  0.0f }, // bottom-right
+       { 0.5f,  0.5f, -0.5f,  1.0f, 1.0f,  0.0f,  1.0f,  0.0f }, // top-right
+       { 0.5f,  0.5f, -0.5f,  1.0f, 1.0f,  0.0f,  1.0f,  0.0f }, // top-right
+       { -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,  0.0f,  1.0f,  0.0f }, // top-left
+       { -0.5f,  0.5f,  0.5f,  0.0f, 0.0f,  0.0f,  1.0f,  0.0f }  // bottom-left
     };
 };

@@ -8,5 +8,5 @@ struct TextureData
 
 struct VertexUV
 {
-	float x, y, z, u, v;
+	float x, y, z, u, v, nx, ny, nz;
 };
