@@ -79,18 +79,19 @@ void SceneDesigner::prepareScene()
 		//{
 			GameObject* cube = new GameObject();
 			cube->layer = "enemies";
-			cube->rotation.set(0, 0, 3);
+			cube->rotation.set(0, 3, 0);
 			cube->transform.set((x_anchor += 5), y_anchor, (z_anchor+=2));
-			cube->scale.set(2, 2, 2);
+			cube->scale.set(5, 5, 5);
 
 			cube->meshRenderer = static_cast<BaseMeshRenderer*>(new CubeTexturedMeshRenderer(cube));
 			cube->meshRenderer->createGLProgram(cube_vertex_shader, cube_fragment_shader);
 
-			/*
+			
 			GameObject* colorCube = new GameObject();
 			colorCube->layer = "enemies";
-			colorCube->transform.set(10 + aux + i * 5, 5, 0);
-			colorCube->scale.set(10, 10, 1);
+			colorCube->rotation.set(0, 3, 0);
+			colorCube->transform.set(10, 5, 0);
+			colorCube->scale.set(10, 10, 10);
 
 			colorCube->meshRenderer = static_cast<BaseMeshRenderer*>(new ColorCubeMeshRenderer(colorCube));
 			colorCube->meshRenderer->createGLProgram(colors_vs, colors_fs);
@@ -99,7 +100,6 @@ void SceneDesigner::prepareScene()
 			//scene->addObject(cube);
 
 			scene->addObject(colorCube);
-			*/
 			scene->addObject(cube);
 		//}
 		//z_anchor = -5;

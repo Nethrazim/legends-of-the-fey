@@ -8,7 +8,7 @@ extern SDL_GLContext context_;
 
 namespace GameObjects
 {
-	GameObjectRenderer::GameObjectRenderer() {}
+	GameObjectRenderer::GameObjectRenderer(): _gameObject(nullptr) {}
 	
 	void GameObjectRenderer::setGameObjectInstance(GameObject* gameObject)
 	{

@@ -51,20 +51,28 @@ void ColorCubeMeshRenderer::render(int width, int height, SDL_Window* window, SD
 
 	static GLint uMVP = -1;
 
-	if (uMVP == -1)
-	{
+	if (uMVP == -1) {
 		uMVP = glGetUniformLocation(program, "uMVP"); // get uniform location
 	}
 
 	glUniformMatrix4fv(uMVP, 1, GL_FALSE, glm::value_ptr(gameObject->mvpMatrix));
 	
 	//LIGHT COLOR UNIFORM
-	static GLint lightColor = -1;
-	if (lightColor == -1)
-	{
-		lightColor = glGetUniformLocation(program, "lightColor");
+	static GLint lightColorLocation = -1;
+	if (lightColorLocation == -1) {
+		lightColorLocation = glGetUniformLocation(program, "lightColor");
 		glm::vec3 lightColorValue(1.0, 1.0f, 1.0f);
-		glUniform3fv(lightColor, 1, glm::value_ptr(lightColorValue));
+		glUniform3fv(lightColorLocation, 1, glm::value_ptr(lightColorValue));
+	}
+	else {
+		time += 0.1f;
+
+		glm::vec3 lightColorValue(
+			(std::sin(time) + 1.0f) / 2.0f,
+			(std::cos(time) + 1.0f) / 2.0f,
+			(std::sin(time + 3.14f / 2.0f) + 1.0f) / 2.0f);
+
+		glUniform3fv(lightColorLocation, 1, glm::value_ptr(lightColorValue));
 	}
 	
 

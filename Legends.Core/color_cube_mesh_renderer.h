@@ -8,6 +8,7 @@ struct TextureData;
 class ColorCubeMeshRenderer : public BaseMeshRenderer
 {
 public:
+    float time = 0.0f;
     ColorCubeMeshRenderer(GameObject* gameObject);
     ColorCubeMeshRenderer(GameObject* gameObject, float* newVertices, int size);
     ~ColorCubeMeshRenderer();
