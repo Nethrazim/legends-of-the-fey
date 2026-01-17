@@ -3,6 +3,7 @@
 #include "game_object.h"
 #include <glm/gtc/type_ptr.hpp>
 #include "camera.h"
+#include "system.h"
 
 ColorCubeMeshRenderer::ColorCubeMeshRenderer(GameObject* gameObject)
 	: BaseMeshRenderer(gameObject) 
@@ -89,10 +90,27 @@ void ColorCubeMeshRenderer::render(int width, int height, SDL_Window* window, SD
 	}
 
 	static GLint lightPos = -1;
+	vec3 lightPosition = Camera::getInstance()->center;
 	if (lightPos == -1)
 	{
 		lightPos = glGetUniformLocation(program, "lightPos");
 		glUniform3fv(lightPos, 1, glm::value_ptr(Camera::getInstance()->center));
+	}
+	else
+	{
+		// Time-based angle for circular motion
+		float time = SDL_GetTicks64() / 1000.0f; // Time in seconds
+		// Radius of the circle
+		float radius = 2.0f;
+		// Calculate circular motion in the XZ plane
+		lightPosition.x = radius * cos(time) * System::deltaTime; // X position
+		lightPosition.z = radius * sin(time) * System::deltaTime; // Z position
+
+		// Optional: Oscillate the Y position for vertical movement
+		lightPosition.y = 1.0f + sin(time) * 0.5f;
+
+		// Pass the updated light position to the shader
+		glUniform3fv(lightPos, 1, glm::value_ptr(lightPosition));
 	}
 	
 	//LIGHT COLOR UNIFORM
@@ -102,17 +120,16 @@ void ColorCubeMeshRenderer::render(int width, int height, SDL_Window* window, SD
 		glm::vec3 lightColorValue(1.0, 1.0f, 1.0f);
 		glUniform3fv(lightColorLocation, 1, glm::value_ptr(lightColorValue));
 	}
-	//else {
-		/*time += 0.1f;
+	else {
+		time += 0.1f;
 
 		glm::vec3 lightColorValue(
 			(std::sin(time) + 1.0f) / 2.0f,
 			(std::cos(time) + 1.0f) / 2.0f,
-			(std::sin(time + 3.14f / 2.0f) + 1.0f) / 2.0f);
+			1.0f/*(std::sin(time + 3.14f / 2.0f) + 1.0f) / 2.0f*/);
 
 		glUniform3fv(lightColorLocation, 1, glm::value_ptr(lightColorValue));
-		*/
-	//}
+	}
 	
 
 	//OBJECT COLOR UNIFORM

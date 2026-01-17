@@ -79,9 +79,9 @@ void SceneDesigner::prepareScene()
 		//{
 			GameObject* cube = new GameObject();
 			cube->layer = "enemies";
-			cube->rotation.set(0, 3, 0);
+			cube->rotation.set(0, 0.01f, 0);
 			cube->transform.set(-10, 5, 10);
-			cube->scale.set(10, 10, 10);
+			cube->scale.set(5, 5, 5);
 
 			cube->meshRenderer = static_cast<BaseMeshRenderer*>(new CubeTexturedMeshRenderer(cube));
 			cube->meshRenderer->createGLProgram(cube_vertex_shader, cube_fragment_shader);
@@ -89,7 +89,7 @@ void SceneDesigner::prepareScene()
 			
 			GameObject* colorCube = new GameObject();
 			colorCube->layer = "enemies";
-			colorCube->rotation.set(0, 3, 0);
+			colorCube->rotation.set(0, 0.001f, 0);
 			colorCube->transform.set(10, 5, 0);
 			colorCube->scale.set(10, 10, 10);
 
@@ -109,4 +109,5 @@ void SceneDesigner::prepareScene()
 		//y_anchor = 5;
 	//
 	SceneManager::addScene(scene);
+	Camera::backgroundColor = vec4(0, 0, 0, 1);
 }

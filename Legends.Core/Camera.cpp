@@ -1,6 +1,8 @@
 #include "camera.h"
 
 Camera* Camera::instance = nullptr;
+vec4 Camera::backgroundColor = vec4(0.192f, 0.302f, 0.475f, 1.0f);
+
 
 Camera::Camera() : view(1.0f), projection(1.0f) {
 

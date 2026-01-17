@@ -5,8 +5,11 @@
 #include "input_manager.h"
 #include "scene_manager.h"
 #include "scene.h"
+#include "camera.h"
 
-#include "System.h"
+
+#include "system.h"
+
 extern SDL_GLContext context_;
 
 SDL_Renderer* GameLoop::renderer = nullptr;
@@ -92,7 +95,7 @@ void GameLoop::update() {
 
 void GameLoop::render() {
 	glViewport(0, 0, 800, 600);
-	glClearColor(0.192f, 0.302f, 0.475f, 1.0f);
+	glClearColor(Camera::backgroundColor.x, Camera::backgroundColor.y, Camera::backgroundColor.z, Camera::backgroundColor.z);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	SceneManager::currentScene()->render();
